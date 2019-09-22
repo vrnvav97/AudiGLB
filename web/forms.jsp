@@ -1,11 +1,6 @@
-<%-- 
-    Document   : forms
-    Created on : 22 Sep, 2019, 2:06:51 PM
-    Author     : ROHIT
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html>
 <head>
