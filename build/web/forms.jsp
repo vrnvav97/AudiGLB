@@ -76,8 +76,6 @@
 				</select>
 				<label class="label">Name of Event</label>
 				<input type="text" name="eventName"/>
-				<label class="label">Chief Guest of Event</label>
-				<input type="text" name="eventName"/>
 				<label class="label">Type of Event</label>
 				<input type="radio" class="typeOfEvent" name="One" value="One  " checked="true">  One
 				<input type="radio" class="typeOfEvent" name="Two" value="Two  ">  Two
