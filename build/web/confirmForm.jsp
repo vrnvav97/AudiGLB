@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Form</title>
+	<title>Confirm Form</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
 		body
@@ -28,7 +28,7 @@
 			top: 20%;
 			left: 30%;
 			background-color: #000;
-			opacity: 0.5;
+			opacity: 0.9;
 			width: 500px;
 			height: 500px;
 			color: #fff;
@@ -93,7 +93,7 @@
                     </div>
                     <div class="column right" style="background-color:#ffc107;">
                                 <div class="back">
-                                  <h3 class="text-center" style="font-size: 3em;">Book Audi</h3>
+                                  <h3 class="text-center" style="font-size: 3em;">Confirm</h3>
                                   <form>
                                           <label class="label">Name of Department</label>
                                           <font size="4" color="green">example_CSE</font> <br>
@@ -112,9 +112,10 @@
                                           
                                               <label class="label">Expected Gathering</label>
                                               <font size="4" color="green">example_500</font> <br><br>
-                                          <center> <div  text-align="center" class="form-group">
-                                              <input type="button" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                              <input type="button" name="submit" value="Allow Audi">
+                                          <center> 
+                                              <div  text-align="center" class="form-group">
+                                                  <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                  <input type="button" class="btn-success"name="submit" value="Book Audi">
                                               </div>
                                           </center>
                                   </form>
