@@ -23,7 +23,7 @@
 			top: 20%;
 			left: 30%;
 			background-color: #000;
-			opacity: 0.5;
+			opacity: 0.9;
 			width: 500px;
 			height: 500px;
 			color: #fff;
@@ -61,7 +61,7 @@
 	<div class="container">
 		<div class="back">
 			<h3 class="text-center" style="font-size: 3em;">Book Audi</h3>
-			<form>
+                        <form action="confirmForm.jsp" method="post">
 				<label class="label">Name of Department</label>
 				<select class="drop-down">
 					<option>Select</option>
@@ -84,7 +84,7 @@
 				<input type="text" name="eventChiefGuest"/>
 				<div class="form-group">
                                     <label class="label">Date</label>
-				    <input type="date" name="eventDate">
+                                    <input type="date" name="eventDate" id="dateChooser" onchange=f()>
                                 </div>
                                 <div class="form-group">
                                     <label class="label">Time</label>
@@ -95,12 +95,28 @@
 				    <input type="text" name="eventGathering">
                                 </div>
                                 <center> <div  text-align="center" class="form-group">
-                                    <input type="button" name="submit" value="Book Audi">
+                                        <input type="submit" class="btn-success" name="submit" value="Book Audi">
                                     </div>
                                 </center>
                         </form>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
+        <script>
+            var d = new Date();
+	var date = [
+  d.getFullYear(),
+  ('0' + (d.getMonth() + 1)).slice(-2),
+  ('0' + d.getDate()).slice(-2)
+].join('-');
+
+
+	document.querySelector('#dateChooser').setAttribute("min",date);
+	function f()
+	{
+		var a = document.getElementById('dateChooser').value; // value
+                console.log(a);
+	}
+            </script>
 </body>
 </html>

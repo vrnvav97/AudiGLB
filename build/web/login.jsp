@@ -48,7 +48,7 @@
 			<div class="login">
 				<h3 class="text-center" style="text-transform: uppercase;margin-top: 10px;">Login</h3>
 				<br>
-				<form class="text-center" style="font-size:20px">
+                                <form class="text-center" style="font-size:20px" method="post" action="loginServlet">
 					<p><span>Username</span> <input type="text" name="username"><br><br>
 					<span>Password</span> <input type="password" name="password"></p>
 					<a href="">Forgot Password</a><br><br>
