@@ -47,7 +47,7 @@ public class LoginCheck extends HttpServlet {
                 ResultSet r=(ResultSet)db.checkLoginProcess(username, password);
                 if(r!=null){
                HashMap h=new HashMap();
-               h.put("email",username);
+               h.put("username",username);
                h.put("name",r.getString("name"));
                h.put("phone",r.getString("phone"));
                session.setAttribute("UserDetails",h);
@@ -55,7 +55,7 @@ public class LoginCheck extends HttpServlet {
                 }
                 else{
                     session.setAttribute("msg","EmailId or Password Is Wrong!!");
-                    response.sendRedirect("home.jsp");
+                    response.sendRedirect("login.jsp");
                 }
             
             }catch(Exception e){
