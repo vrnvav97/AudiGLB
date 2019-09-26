@@ -134,7 +134,7 @@
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Book Audi">
+                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
                                                 </div>
                                             </center>
                                   
