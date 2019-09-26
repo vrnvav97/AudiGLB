@@ -35,11 +35,10 @@ public class LoginCheck extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             HttpSession session=null;
-            out.println("This is Rohit ");
             try{
                 String username=request.getParameter("username");
                 String password=request.getParameter("password");
-                db.DbConnect db=(db.DbConnect)session.getAttribute("db");
+              /*  db.DbConnect db=(db.DbConnect)session.getAttribute("db");
                 if(db==null){
                 db=new db.DbConnect();
                 session.setAttribute("db", db);
@@ -49,15 +48,26 @@ public class LoginCheck extends HttpServlet {
                HashMap h=new HashMap();
                h.put("username",username);
                h.put("name",r.getString("name"));
-               h.put("phone",r.getString("phone"));
+               h.put("post",r.getString("post"));
                session.setAttribute("UserDetails",h);
-               response.sendRedirect("profile.jsp");
+                    if(r.getString("post").equals("admin")){
+                          response.sendRedirect("adminDashboard.jsp");
+                    }else{
+                          response.sendRedirect("userDashboard.jsp");
+                    }
                 }
                 else{
-                    session.setAttribute("msg","EmailId or Password Is Wrong!!");
+                    session.setAttribute("msg","Username or Password Is Wrong!!");
                     response.sendRedirect("login.jsp");
                 }
-            
+            */
+                if(username.equals("admin")){
+                          response.sendRedirect("adminDashboard.jsp");
+                }else if(username.equals("teacher")){
+                          response.sendRedirect("userDashboard.jsp");
+                }else{
+                        response.sendRedirect("login.jsp");
+                }
             }catch(Exception e){
                 e.printStackTrace();
             }

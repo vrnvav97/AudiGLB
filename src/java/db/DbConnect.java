@@ -10,7 +10,7 @@ public class DbConnect {
   public DbConnect(){
       try{
         Class.forName("com.mysql.jdbc.Driver");
-	connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/ptalkdb","root","king");
+	connection=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/onlinemysqldb","rohitchauhan","cb7a70c2");
 	statement=connection.createStatement();	
         
         checkLogin=connection.prepareStatement("select * from user_info where email=? and pass=? ");
