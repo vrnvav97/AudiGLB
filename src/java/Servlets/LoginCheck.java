@@ -7,11 +7,14 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javax.servlet.http.*;
 /**
  *
  * @author ROHIT
@@ -31,20 +34,33 @@ public class LoginCheck extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginCheck</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginCheck at " + request.getContextPath() + "</h1>");
+            HttpSession session=null;
             out.println("This is Rohit ");
-            out.println("<h1>Servlet LoginCheck at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet LoginCheck at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet LoginCheck at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            try{
+                String username=request.getParameter("username");
+                String password=request.getParameter("password");
+                db.DbConnect db=(db.DbConnect)session.getAttribute("db");
+                if(db==null){
+                db=new db.DbConnect();
+                session.setAttribute("db", db);
+                }
+                ResultSet r=(ResultSet)db.checkLoginProcess(username, password);
+                if(r!=null){
+               HashMap h=new HashMap();
+               h.put("email",username);
+               h.put("name",r.getString("name"));
+               h.put("phone",r.getString("phone"));
+               session.setAttribute("UserDetails",h);
+               response.sendRedirect("profile.jsp");
+                }
+                else{
+                    session.setAttribute("msg","EmailId or Password Is Wrong!!");
+                    response.sendRedirect("home.jsp");
+                }
+            
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
     }
 
