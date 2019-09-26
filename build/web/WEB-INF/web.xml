@@ -3,5 +3,13 @@
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+    <servlet>
+        <servlet-name>LoginCheck</servlet-name>
+        <servlet-class>Servlets.LoginCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginCheck</servlet-name>
+        <url-pattern>/LoginCheck</url-pattern>
+    </servlet-mapping>
     
 </web-app>
