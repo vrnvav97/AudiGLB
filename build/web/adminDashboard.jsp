@@ -2,7 +2,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.util.HashMap"%>
 <%
-    HashMap h=(HashMap)session.getAttribute("UserDetails");
+    HashMap h=(HashMap)session.getAttribute("AdminDetails");
     if(h!=null){
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

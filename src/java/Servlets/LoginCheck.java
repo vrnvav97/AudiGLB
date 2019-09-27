@@ -38,10 +38,12 @@ public class LoginCheck extends HttpServlet {
                h.put("username",username);
                h.put("name",r.getString("name"));
                h.put("post",r.getString("post"));
-               session.setAttribute("UserDetails",h);
+               
                     if(r.getString("post").equals("admin")){
+                          session.setAttribute("AdminDetails",h);
                           response.sendRedirect("adminDashboard.jsp");
                     }else if(r.getString("post").equals("Teacher")){
+                          session.setAttribute("UserDetails",h);
                           response.sendRedirect("userDashboard.jsp");
                     }else{
                           session.setAttribute("msg","Only Teachers And Administration peaple Have Access!!!");
