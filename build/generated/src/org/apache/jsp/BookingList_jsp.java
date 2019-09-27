@@ -109,7 +109,7 @@ public final class BookingList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("\t<div class=\"py-3 container-fluid\" style=\"background-color: #592106;margin: 0px;display: inline-block;\">\r\n");
-      out.write("\t\t<div class=\"text-center\" style=\"width: 80%;float: left;\">\r\n");
+      out.write("\t\t<div class=\"text-center\" style=\"width: 70%;float: left;\">\r\n");
       out.write("\t\t\t\t<h2 style=\"color: white; font-family: Times New Roman;\">G L Bajaj Institute of Technology and Management</h2>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t\t<div style=\"width: 20%;float: right;color: #fff;\">\r\n");
@@ -170,7 +170,7 @@ public final class BookingList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <center> \r\n");
       out.write("                                                <div  text-align=\"center\" class=\"form-group\">\r\n");
       out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
-      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Book Audi\">\r\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </center>\r\n");
       out.write("                                  \r\n");
@@ -211,7 +211,7 @@ public final class BookingList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <center> \r\n");
       out.write("                                                <div  text-align=\"center\" class=\"form-group\">\r\n");
       out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
-      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Book Audi\">\r\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </center>\r\n");
       out.write("                                  \r\n");
@@ -252,7 +252,7 @@ public final class BookingList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <center> \r\n");
       out.write("                                                <div  text-align=\"center\" class=\"form-group\">\r\n");
       out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
-      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Book Audi\">\r\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </center>\r\n");
       out.write("                                  \r\n");
@@ -293,7 +293,7 @@ public final class BookingList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <center> \r\n");
       out.write("                                                <div  text-align=\"center\" class=\"form-group\">\r\n");
       out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
-      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Book Audi\">\r\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </center>\r\n");
       out.write("                                  \r\n");

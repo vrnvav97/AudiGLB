@@ -66,7 +66,7 @@
 </head>
 <body>
 	<div class="py-3 container-fluid" style="background-color: #592106;margin: 0px;display: inline-block;">
-		<div class="text-center" style="width: 80%;float: left;">
+		<div class="text-center" style="width: 70%;float: left;">
 				<h2 style="color: white; font-family: Times New Roman;">G L Bajaj Institute of Technology and Management</h2>
 		</div>
 		<div style="width: 20%;float: right;color: #fff;">
