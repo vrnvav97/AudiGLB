@@ -1,9 +1,10 @@
-<%-- 
-    Document   : confirmForm
-    Created on : 22 Sep, 2019, 2:34:46 PM
-    Author     : ROHIT
---%>
-
+<%@page import="java.sql.ResultSetMetaData"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.util.HashMap"%>
+<%
+    HashMap h=(HashMap)session.getAttribute("UserDetails");
+    if(h!=null){
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -128,3 +129,9 @@
 	<script type="text/javascript" src="js/font-awesome.js"></script>
 </body>
 </html>
+<%
+    }else{
+        session.setAttribute("msg","Plz Login First");
+        response.sendRedirect("login.jsp");
+    }
+%>

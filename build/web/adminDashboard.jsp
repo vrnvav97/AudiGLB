@@ -1,4 +1,10 @@
-
+<%@page import="java.sql.ResultSetMetaData"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.util.HashMap"%>
+<%
+    HashMap h=(HashMap)session.getAttribute("UserDetails");
+    if(h!=null){
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -82,7 +88,7 @@
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
-			<p class="navbar">hii</p>
+                        <p class="navbar">Welcome:<%=(String)h.get("name")%></p>
 			<p class="navbar">hi</p>
 			<p class="navbar">hi</p>
 			<p class="navbar"><i class="fa fa-bell" aria-hidden="true" ><span class="badge">1</span></i></p>
@@ -130,3 +136,9 @@
 <script type="text/javascript" src="js/font-awesome.js"></script>
 </body>
 </html>
+<%
+    }else{
+        session.setAttribute("msg","Plz Login First");
+        response.sendRedirect("login.jsp");
+    }
+%>
