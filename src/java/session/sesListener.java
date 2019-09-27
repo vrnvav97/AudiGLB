@@ -1,15 +1,16 @@
-package listener;
 
-import db.DbConnect;
+package session;
+
+import dba.dbConnect;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-public class SesListener implements HttpSessionListener{
+public class sesListener implements HttpSessionListener{
 	public void sessionCreated(HttpSessionEvent he){
 		try{
 	HttpSession session=he.getSession();
-	db.DbConnect db=new db.DbConnect();
+	dba.dbConnect db=new dba.dbConnect();
         session.setAttribute("db",db);
 		}catch(Exception ex){
 			ex.printStackTrace();
