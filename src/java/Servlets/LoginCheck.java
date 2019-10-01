@@ -56,9 +56,8 @@ public class LoginCheck extends HttpServlet {
                response.sendRedirect("login.jsp");
             }
            }catch(Exception e){
-              e.printStackTrace();
-              session.setAttribute("msg","error!!!");
-             response.sendRedirect("login.jsp");
+               session.setAttribute("msg","error!!!");
+               response.sendRedirect("login.jsp");
         }
     }
 

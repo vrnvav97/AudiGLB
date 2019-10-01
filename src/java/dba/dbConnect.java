@@ -35,7 +35,6 @@ public class dbConnect {
              return null;
           }
       }catch (Exception ex) {
-          ex.printStackTrace();
           return null;
       }
    }
