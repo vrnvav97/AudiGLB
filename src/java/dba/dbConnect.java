@@ -14,8 +14,8 @@ public class dbConnect {
     public dbConnect(){
       try{
         Class.forName("com.mysql.cj.jdbc.Driver");
-	  Connection c=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/glbaudi","glbaudi","Glbaudi123");
-          Statement st=c.createStatement();  
+	  c=DriverManager.getConnection("jdbc:mysql://db4free.net:3306/glbaudi","glbaudi","Glbaudi123");
+          st=c.createStatement();  
         
           checkAdLogin=c.prepareStatement("select * from loginDetails where username=? and password=?");
         

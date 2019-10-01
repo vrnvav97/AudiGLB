@@ -79,13 +79,25 @@
 					<option>EE - Electronics Engineering</option>
 					<option>CE - Civil Enginnering</option>
 					<option>MBA - Master of Business Administration</option>
+                                        <option>PGDM</option>
+					<option>Training & Placement</option>
+					<option>BBA - Bachelor of Business Administration</option>
+					<option>BCA - Master of Computer Applications</option>
+                                        <option>College</option>
+                                        <option>Other</option>	
 				</select>
 				<label class="label">Name of Event</label>
 				<input type="text" name="eventName"/>
 				<label class="label">Type of Event</label>
-				<input type="radio" class="typeOfEvent" name="One" value="One  " checked="true">  One
-				<input type="radio" class="typeOfEvent" name="Two" value="Two  ">  Two
-                                <input type="radio" class="typeOfEvent" name="Three" value="Three  ">  Three
+				<input type="radio" class="typeOfEvent" name="One" value="One  " checked="true">  Departmental
+				<input type="radio" class="typeOfEvent" name="Two" value="Two  ">  Inter Departmental
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="typeOfEvent" name="Three" value="Three  ">  Inter College
+                                <input type="radio" class="typeOfEvent" name="Three" value="Three  ">  Other
+                                <br>
 			        <label class="label">Chief Guest of the Event</label>
 				<input type="text" name="eventChiefGuest"/>
 				<div class="form-group">
