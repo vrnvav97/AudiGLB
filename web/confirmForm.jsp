@@ -100,6 +100,7 @@
                             <% } %>
 		</div>
 	</div>
+<<<<<<< HEAD
         <%
             String nameOfDepartment=request.getParameter("nameOfDepartment");
             String eventName=request.getParameter("eventName");
@@ -114,6 +115,9 @@
            
         %>
         
+=======
+       
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
 	<div class="container" >
                 <div class="row">
                     <div class="column left" style="background-color:#ffc107;">
@@ -125,17 +129,18 @@
                                   <form action="bookAudiProcess" method="post">
                                           <label class="label">Name of Department</label>
 
-                                          <font size="4" color="green" ><%=nameOfDepartment %></font> <br>
+                                          <font size="4" color="green" ><%=request.getParameter("nameOfDepartment") %></font> <br>
                                           <label class="label">Name of Event</label>
-                                          <font size="4" color="green" ><%=eventName %></font> <br>
+                                          <font size="4" color="green" ><%=request.getParameter("eventName") %></font> <br>
                                           <label class="label">Type of Event</label>
-                                          <font size="4" color="green"><%=typeOfEvent %></font> <br>
+                                          <font size="4" color="green"><%=request.getParameter("typeOfEvent") %></font> <br>
                                           <label class="label">Chief Guest of the Event</label>
-                                          <font size="4" color="green"><%=eventChiefGuest %></font> <br>
+                                          <font size="4" color="green"><%=request.getParameter("eventChiefGuest") %></font> <br>
                                               <label class="label">Date</label>
-                                          <font size="4" color="green"><%=eventDate %></font> <br>
+                                              <font size="4" color="green"><%=request.getParameter("eventDate") %></font> <br>
                                               <label class="label">Time</label>
                                               
+<<<<<<< HEAD
                                           <font size="4" color="green"><%=usr_time1 %></font>&nbsp;&nbsp; To &nbsp;&nbsp;
                                           <font size="4" color="green"><%=usr_time2 %></font> <br>
                                           
@@ -150,6 +155,14 @@
                                           <input type='hidden' name='usr_time1' value='<%=usr_time1%>'>
                                           <input type='hidden' name='usr_time2' value='<%=usr_time2%>'>
                                           <input type='hidden' name='eventGathering' value='<%=eventGathering%>'>
+=======
+                                              <font size="4" color="green"><%=request.getParameter("time1") %></font> To 
+                                              <font size="4" color="green"><%=request.getParameter("time2") %></font> <br>
+                                          
+                                              <label class="label">Expected Gathering</label>
+                                              <font size="4" color="green"><%=request.getParameter("eventGathering") %></font>
+                                         <br><br>
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
                                             <center> 
 
                                               <div  text-align="center" class="form-group">
