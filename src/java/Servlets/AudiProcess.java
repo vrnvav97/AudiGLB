@@ -20,34 +20,35 @@ public class AudiProcess extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException
             {
            response.setContentType("text/html;charset=UTF-8");
-           PrintWriter out=null;
-           HttpSession session=null;
+           PrintWriter out =response.getWriter();;
+           HttpSession session=request.getSession();
+                System.out.println(request.getParameter("eventName"));
         try{
+                       
+//            HashMap h=(HashMap)session.getAttribute("UserDetails");
+//            String username=(String)h.get("username");
+//            
+//            String nameOfDepartment=request.getParameter("nameOfDepartment");
+//            String eventName=request.getParameter("eventName");
+//            String typeOfEvent=request.getParameter("typeOfEvent");
+//            String eventChiefGuest=request.getParameter("eventChiefGuest");
+//           
+//            String eventDate=request.getParameter("eventDate");
+//            java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
+//            java.util.Date dt=sdf.parse(eventDate);
+//            java.sql.Date sdt=new java.sql.Date(dt.getTime());
+//            
+//            String usr_time1=request.getParameter("time1");
+//            Time time1 = Time.valueOf( usr_time1 );
+//            String usr_time2=request.getParameter("time2");
+//            Time time2 = Time.valueOf( usr_time2 );
+//            
+//            String eventGather=request.getParameter("eventGathering");
+//            int eventGathering=Integer.parseInt(eventGather);
+//            System.out.println(username+" "+nameOfDepartment+" "+eventName+" "+typeOfEvent+" "+eventChiefGuest+" "+sdt+" "+time1+" "+time2+" "+String.valueOf(eventGathering));
+//            
             
-            session=request.getSession();
-            out=response.getWriter();
             
-            HashMap h=(HashMap)session.getAttribute("UserDetails");
-            String username=(String)h.get("username");
-            
-            String nameOfDepartment=request.getParameter("nameOfDepartment");
-            String eventName=request.getParameter("eventName");
-            String typeOfEvent=request.getParameter("typeOfEvent");
-            String eventChiefGuest=request.getParameter("eventChiefGuest");
-           
-            String eventDate=request.getParameter("eventDate");
-            java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
-            java.util.Date dt=sdf.parse(eventDate);
-            java.sql.Date sdt=new java.sql.Date(dt.getTime());
-            
-            String usr_time1=request.getParameter("usr_time1");
-            Time time1 = Time.valueOf( usr_time1 );
-            String usr_time2=request.getParameter("usr_time2");
-            Time time2 = Time.valueOf( usr_time2 );
-            
-            String eventGather=request.getParameter("eventGathering");
-            int eventGathering=Integer.parseInt(eventGather);
-            System.out.println(username+" "+nameOfDepartment+" "+eventName+" "+typeOfEvent+" "+eventChiefGuest+" "+sdt+" "+time1+" "+time2+" "+String.valueOf(eventGathering));
          /*   dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
             if(db==null){
                 db=new dba.dbConnect();
@@ -80,6 +81,7 @@ public class AudiProcess extends HttpServlet {
                response.sendRedirect("home.jsp");
             }*/
            }catch(Exception e){
+               System.out.println(e);
                session.setAttribute("msg","error!!!");
                response.sendRedirect("login.jsp");
         }
