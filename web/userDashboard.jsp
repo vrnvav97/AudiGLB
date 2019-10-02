@@ -117,7 +117,7 @@
 				</div>
 			</a>
 
-			<a href="">
+			<a href="history.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h3 class="text-center">History</h3>
