@@ -29,7 +29,7 @@ public class AudiProcess extends HttpServlet {
             
             HashMap h=(HashMap)session.getAttribute("UserDetails");
             String username=(String)h.get("username");
-            String name=(String)request.getParameter("nameOfDepartment");
+            String nameOfDepartment=(String)request.getParameter("nameOfDepartment");
             String eventName=request.getParameter("eventName");
             String typeOfEvent=request.getParameter("typeOfEvent");
             String eventChiefGuest=request.getParameter("eventChiefGuest");
@@ -41,13 +41,14 @@ public class AudiProcess extends HttpServlet {
            String usr_time1=request.getParameter("usr_time1");
             
             String usr_time2=request.getParameter("usr_time2");
-           String eventGathering=request.getParameter("eventGathering");
-         /*   dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
+           String eventGather=request.getParameter("eventGathering");
+           int eventGathering=Integer.parseInt(eventGather);
+            dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
             if(db==null){
                 db=new dba.dbConnect();
                 session.setAttribute("db", db);
             }
-            String s=db.insertAudiBookigProcess(nameOfDepartment,eventName,typeOfEvent,eventChiefGuest,sdt,time1,time2,eventGathering,username);
+            String s=db.insertAudiBookigProcess(nameOfDepartment,eventName,typeOfEvent,eventChiefGuest,sdt,usr_time1,usr_time2,eventGathering,username);
            /* if(s.equalsIgnoreCase("Success")){
                HashMap h=new HashMap();
                h.put("email",email);
