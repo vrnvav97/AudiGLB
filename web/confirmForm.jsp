@@ -1,3 +1,4 @@
+<%@page import="java.sql.Time"%>
 <%@page import="java.sql.ResultSetMetaData"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.util.HashMap"%>
@@ -87,6 +88,27 @@
 			<p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>
 		</div>
 	</div>
+        <%
+            String nameOfDepartment=request.getParameter("nameOfDepartment");
+            String eventName=request.getParameter("eventName");
+            String typeOfEvent=request.getParameter("typeOfEvent");
+            String eventChiefGuest=request.getParameter("eventChiefGuest");
+           
+            String eventDate=request.getParameter("eventDate");
+          //  java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
+          //  java.util.Date dt=sdf.parse(eventDate);
+          //  java.sql.Date sdt=new java.sql.Date(dt.getTime());
+            
+            String usr_time1=request.getParameter("usr_time1");
+           // Time time1 = Time.valueOf( usr_time1 );
+            String usr_time2=request.getParameter("usr_time2");
+            //Time time2 = Time.valueOf( usr_time2 );
+            
+          //  String eventGathering=request.getParameter("eventGathering");
+           // int eventGathering=Integer.parseInt(eventGather);
+            
+            
+        %>
 	<div class="container" >
                 <div class="row">
                     <div class="column left" style="background-color:#ffc107;">
@@ -95,28 +117,35 @@
                     <div class="column right" style="background-color:#ffc107;">
                                 <div class="back">
                                   <h3 class="text-center" style="font-size: 3em;">Confirm</h3>
-                                  <form>
+                                  <form action="bookAudiProcess" method="post">
                                           <label class="label">Name of Department</label>
-                                          <font size="4" color="green">example_CSE</font> <br>
+                                          <font size="4" color="green" ><%=nameOfDepartment %></font> <br>
                                           <label class="label">Name of Event</label>
-                                          <font size="4" color="green">example_Code-Auctor2K18</font> <br>
+                                          <font size="4" color="green" ><%=eventName %></font> <br>
                                           <label class="label">Type of Event</label>
-                                          <font size="4" color="green">example_two</font> <br>
+                                          <font size="4" color="green"><%=typeOfEvent %></font> <br>
                                           <label class="label">Chief Guest of the Event</label>
-                                          <font size="4" color="green">example_OFFICIALMUKUL</font> <br>
+                                          <font size="4" color="green"><%=eventChiefGuest %></font> <br>
                                               <label class="label">Date</label>
-                                          <font size="4" color="green">example_21-09-19</font> <br>
+                                          <font size="4" color="green"><%=eventDate %></font> <br>
                                               <label class="label">Time</label>
                                               
-                                          <font size="4" color="green">example_10:00</font> To 
-                                          <font size="4" color="green">example_22:30</font> <br>
+                                          <font size="4" color="green"><%=usr_time1 %></font> To 
+                                          <font size="4" color="green"><%=usr_time2 %></font> <br>
                                           
                                               <label class="label">Expected Gathering</label>
-                                              <font size="4" color="green">example_500</font> <br><br>
-                                          <center> 
+                                         <br><br>
+                                          <input type='hidden' name='nameOfDepartment' value=value="<%=nameOfDepartment%>>
+                                          <input type='hidden' name='eventName' value=value="<%=eventName%>>
+                                          <input type='hidden' name='typeOfEvent' value=value="<%=typeOfEvent%>>
+                                          <input type='hidden' name='eventChiefGuest' value=value="<%=eventChiefGuest%>>
+                                          <input type='hidden' name='eventDate' value=value="<%=eventDate%>>
+                                          <input type='hidden' name='usr_time1' value=value="<%=usr_time1%>>
+                                          <input type='hidden' name='usr_time2' value=value="<%=usr_time2%>>
+                                            <center> 
                                               <div  text-align="center" class="form-group">
                                                   <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                  <input type="button" class="btn-success"name="submit" value="Book Audi">
+                                                  <input type="submit" class="btn-success" name="submit" value="Book Audi">
                                               </div>
                                           </center>
                                   </form>
@@ -126,6 +155,8 @@
 
 		
 	</div>
+                                              
+
 	<script type="text/javascript" src="js/font-awesome.js"></script>
         <script>
           var a = document.querySelector(".cancel");

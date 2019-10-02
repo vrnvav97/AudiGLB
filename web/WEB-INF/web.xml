@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee">
+    <servlet-mapping>
+        <servlet-name>AudiProcess</servlet-name>
+        <url-pattern>/bookAudiProcess</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
@@ -7,9 +11,12 @@
         <servlet-name>LoginCheck</servlet-name>
         <servlet-class>Servlets.LoginCheck</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AudiProcess</servlet-name>
+        <servlet-class>Servlets.AudiProcess</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginCheck</servlet-name>
         <url-pattern>/LoginCheck</url-pattern>
     </servlet-mapping>
-    
 </web-app>

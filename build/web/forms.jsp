@@ -72,9 +72,9 @@
 	<div class="container">
 		<div class="back">
 			<h3 class="text-center" style="font-size: 3em;">Book Audi</h3>
-                        <form action="confirmForm.jsp" method="post">
+                        <form action="confirmForm.jsp" method="post" >
 				<label class="label">Name of Department</label>
-				<select class="drop-down">
+				<select class="drop-down" name="nameOfDepartment">
 					<option>Select</option>
 					<option>CSE - Computer Science & Engineering</option>
 					<option>IT - Information Technology</option>
@@ -125,11 +125,11 @@
 	<script type="text/javascript" src="js/font-awesome.js"></script>
         <script>
             var d = new Date();
-	var date = [
-  d.getFullYear(),
-  ('0' + (d.getMonth() + 1)).slice(-2),
-  ('0' + d.getDate()).slice(-2)
-].join('-');
+            var date = [
+              d.getFullYear(),
+              ('0' + (d.getMonth() + 1)).slice(-2),
+              ('0' + d.getDate()).slice(-2)
+            ].join('-');
 
 
 	document.querySelector('#dateChooser').setAttribute("min",date);
