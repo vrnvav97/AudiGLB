@@ -86,7 +86,7 @@
 			<h3 class="text-center" style="font-size: 3em;">Book Audi</h3>
                         <form action="confirmForm.jsp" method="post" >
 				<label class="label">Name of Department</label>
-<<<<<<< HEAD
+
 				<select class="drop-down" name="nameOfDepartment">
 					<option>Select</option>
 					<option>CSE - Computer Science & Engineering</option>
@@ -103,24 +103,6 @@
 					<option>BCA - Bachelor of Computer Applications</option>
                                         <option>College</option>
                                         <option>Other</option>	
-=======
-                                <select class="drop-down" name="nameOfDepartment" required>
-                                    <option value="Select">Select</option>
-                                    <option value="CSE - Computer Science & Engineering">CSE - Computer Science & Engineering</option>
-                                    <option value="IT - Information Technology">IT - Information Technology</option>
-                                    <option value="MCA - Master of Computer Applications">MCA - Master of Computer Applications</option>
-                                    <option value="1st YR -  Applied Sciences">1st YR -  Applied Sciences</option>
-                                    <option value="ECE - Electornics & Communication Engineering">ECE - Electornics & Communication Engineering</option>
-                                    <option value="EE - Electronics Engineering">EE - Electronics Engineering</option>
-                                    <option value="CE - Civil Enginnering">CE - Civil Enginnering</option>
-                                    <option value="MBA - Master of Business Administration">MBA - Master of Business Administration</option>
-                                    <option value="PGDM - Post Graduate Diploma in Management">PGDM - Post Graduate Diploma in Management</option>
-                                    <option value="TNP - Training & Placement">TNP - Training & Placement</option>
-                                    <option value="BBA - Bachelor of Business Administration">BBA - Bachelor of Business Administration</option>
-                                    <option value="BCA - Bachelor of Computer Applications">BCA - Bachelor of Computer Applications</option>
-                                    <option value="College">College</option>
-                                    <option value="Other">Other</option>	
->>>>>>> baa7d774e5084cc5e53d0e0fcf297015c1f073b9
 				</select>
                                 <label class="label">Name of Event</label>
                                 <input type="text" name="eventName" required/>

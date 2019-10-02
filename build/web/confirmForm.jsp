@@ -121,6 +121,7 @@
             
             
         %>
+        
 	<div class="container" >
                 <div class="row">
                     <div class="column left" style="background-color:#ffc107;">
@@ -131,7 +132,7 @@
                                   <h3 class="text-center" style="font-size: 3em;">Confirm</h3>
                                   <form action="bookAudiProcess" method="post">
                                           <label class="label">Name of Department</label>
-<<<<<<< HEAD
+
                                           <font size="4" color="green" ><%=nameOfDepartment %></font> <br>
                                           <label class="label">Name of Event</label>
                                           <font size="4" color="green" ><%=eventName %></font> <br>
@@ -156,25 +157,7 @@
                                           <input type='hidden' name='usr_time1' value=value="<%=usr_time1%>>
                                           <input type='hidden' name='usr_time2' value=value="<%=usr_time2%>>
                                             <center> 
-=======
-                                          <font size="4" color="green"><%=request.getParameter("nameOfDepartment")%></font> <br>
-                                          <label class="label">Name of Event</label>
-                                          <font size="4" color="green"><%=request.getParameter("eventName")%></font> <br>
-                                          <label class="label">Type of Event</label>
-                                          <font size="4" color="green"><%=request.getParameter("typeOfEvent")%></font> <br>
-                                          <label class="label">Chief Guest of the Event</label>
-                                          <font size="4" color="green"><%=request.getParameter("eventChiefGuest")%></font> <br>
-                                              <label class="label">Date</label>
-                                          <font size="4" color="green"><%=request.getParameter("eventDate")%></font> <br>
-                                              <label class="label">Time</label>
-                                              
-                                          <font size="4" color="green"><%=request.getParameter("time1")%></font> To 
-                                          <font size="4" color="green"><%=request.getParameter("time2")%></font> <br>
-                                          
-                                              <label class="label">Expected Gathering</label>
-                                              <font size="4" color="green"><%=request.getParameter("eventGathering")%></font> <br><br>
-                                          <center> 
->>>>>>> baa7d774e5084cc5e53d0e0fcf297015c1f073b9
+
                                               <div  text-align="center" class="form-group">
                                                   <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
                                                   <input type="submit" class="btn-success" name="submit" value="Book Audi">
