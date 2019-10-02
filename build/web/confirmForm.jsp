@@ -115,7 +115,7 @@
                                               <font size="4" color="green">example_500</font> <br><br>
                                           <center> 
                                               <div  text-align="center" class="form-group">
-                                                  <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                  <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
                                                   <input type="button" class="btn-success"name="submit" value="Book Audi">
                                               </div>
                                           </center>
@@ -127,6 +127,12 @@
 		
 	</div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
+        <script>
+          var a = document.querySelector(".cancel");
+          a.addEventListener('click',()=>{
+              var result = confirm('Do you really want to Cancel Booking');
+          });
+        </script>
 </body>
 </html>
 <%

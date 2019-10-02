@@ -3,6 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.ResultSetMetaData;
+import java.sql.ResultSet;
+import java.util.HashMap;
 
 public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -40,6 +43,13 @@ public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+
+    HashMap h=(HashMap)session.getAttribute("UserDetails");
+    if(h!=null){
 
       out.write("\r\n");
       out.write("\r\n");
@@ -82,6 +92,11 @@ public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\twidth: 150px;\r\n");
       out.write("\r\n");
       out.write("\t\t}\r\n");
+      out.write("                .radio\r\n");
+      out.write("                {\r\n");
+      out.write("                    font-size: 14px;\r\n");
+      out.write("                    padding: 8px;\r\n");
+      out.write("                }\r\n");
       out.write("\t</style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
@@ -104,27 +119,35 @@ public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<div class=\"container\">\r\n");
       out.write("\t\t<div class=\"back\">\r\n");
       out.write("\t\t\t<h3 class=\"text-center\" style=\"font-size: 3em;\">Book Audi</h3>\r\n");
-      out.write("\t\t\t<form>\r\n");
+      out.write("                        <form action=\"confirmForm.jsp\" method=\"post\">\r\n");
       out.write("\t\t\t\t<label class=\"label\">Name of Department</label>\r\n");
       out.write("\t\t\t\t<select class=\"drop-down\">\r\n");
       out.write("\t\t\t\t\t<option>Select</option>\r\n");
       out.write("\t\t\t\t\t<option>CSE - Computer Science & Engineering</option>\r\n");
       out.write("\t\t\t\t\t<option>IT - Information Technology</option>\r\n");
       out.write("\t\t\t\t\t<option>MCA - Master of Computer Applications</option>\r\n");
-      out.write("\t\t\t\t\t<option>1st YR - </option>\r\n");
+      out.write("\t\t\t\t\t<option>1st YR -  Applied Sciences</option>\r\n");
       out.write("\t\t\t\t\t<option>ECE - Electornics & Communication Engineering</option>\r\n");
       out.write("\t\t\t\t\t<option>EE - Electronics Engineering</option>\r\n");
       out.write("\t\t\t\t\t<option>CE - Civil Enginnering</option>\r\n");
       out.write("\t\t\t\t\t<option>MBA - Master of Business Administration</option>\r\n");
+      out.write("                                        <option>PGDM - Post Graduate Diploma in Management</option>\r\n");
+      out.write("\t\t\t\t\t<option>TNP - Training & Placement</option>\r\n");
+      out.write("\t\t\t\t\t<option>BBA - Bachelor of Business Administration</option>\r\n");
+      out.write("\t\t\t\t\t<option>BCA - Bachelor of Computer Applications</option>\r\n");
+      out.write("                                        <option>College</option>\r\n");
+      out.write("                                        <option>Other</option>\t\r\n");
       out.write("\t\t\t\t</select>\r\n");
-      out.write("\t\t\t\t<label class=\"label\">Name of Event</label>\r\n");
+      out.write("                                <label class=\"label\">Name of Event</label>\r\n");
       out.write("\t\t\t\t<input type=\"text\" name=\"eventName\"/>\r\n");
-      out.write("\t\t\t\t<label class=\"label\">Chief Guest of Event</label>\r\n");
-      out.write("\t\t\t\t<input type=\"text\" name=\"eventName\"/>\r\n");
+      out.write("                                <br>\r\n");
       out.write("\t\t\t\t<label class=\"label\">Type of Event</label>\r\n");
-      out.write("\t\t\t\t<input type=\"radio\" class=\"typeOfEvent\" name=\"One\" value=\"One  \" checked=\"true\">  One\r\n");
-      out.write("\t\t\t\t<input type=\"radio\" class=\"typeOfEvent\" name=\"Two\" value=\"Two  \">  Two\r\n");
-      out.write("                                <input type=\"radio\" class=\"typeOfEvent\" name=\"Three\" value=\"Three  \">  Three\r\n");
+      out.write("                                <div class=\"text-center\">\r\n");
+      out.write("                                    <input type=\"radio\" class=\"radio\" name=\"typeOfEvent\" name=\"One\" value=\"One\" checked=\"true\" ><label class=\"radio\">Departmental</label>\r\n");
+      out.write("                                    <input type=\"radio\" class=\"radio\" name=\"typeOfEvent\" name=\"Two\" value=\"Two\" ><label class=\"radio\">Inter Departmental</label>\r\n");
+      out.write("                                    <input type=\"radio\" class=\"radio\" name=\"typeOfEvent\" name=\"Three\" value=\"Three\" ><label class=\"radio\">Inter College</label>\r\n");
+      out.write("                                    <input type=\"radio\" class=\"radio\" name=\"typeOfEvent\" name=\"Four\" value=\"Four\" ><label class=\"radio\">Other</label>\r\n");
+      out.write("                                </div>\r\n");
       out.write("\t\t\t        <label class=\"label\">Chief Guest of the Event</label>\r\n");
       out.write("\t\t\t\t<input type=\"text\" name=\"eventChiefGuest\"/>\r\n");
       out.write("\t\t\t\t<div class=\"form-group\">\r\n");
@@ -140,7 +163,7 @@ public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t    <input type=\"text\" name=\"eventGathering\">\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <center> <div  text-align=\"center\" class=\"form-group\">\r\n");
-      out.write("                                        <input type=\"button\" class=\"btn-success\" name=\"submit\" value=\"Book Audi\">\r\n");
+      out.write("                                        <input type=\"submit\" class=\"btn-success\" name=\"submit\" value=\"Book Audi\">\r\n");
       out.write("                                    </div>\r\n");
       out.write("                                </center>\r\n");
       out.write("                        </form>\r\n");
@@ -164,7 +187,13 @@ public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t}\r\n");
       out.write("            </script>\r\n");
       out.write("</body>\r\n");
-      out.write("</html>");
+      out.write("</html>\r\n");
+
+    }else{
+        session.setAttribute("msg","Plz Login First");
+        response.sendRedirect("login.jsp");
+    }
+
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

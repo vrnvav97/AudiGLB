@@ -78,6 +78,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\theight: 320px;\r\n");
       out.write("\t\t\tcolor: #fff;\r\n");
       out.write("\t\t}\r\n");
+      out.write("                input[type=\"submit\"]:hover {\r\n");
+      out.write("                box-shadow: 0px 3px 5px 1px #6eff00;\r\n");
+      out.write("}\r\n");
       out.write("\t</style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
@@ -88,14 +91,37 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t<div class=\"container\">\r\n");
+      out.write("                         \r\n");
       out.write("\t\t\t<div class=\"login\">\r\n");
+      out.write("                             \r\n");
       out.write("\t\t\t\t<h3 class=\"text-center\" style=\"text-transform: uppercase;margin-top: 10px;\">Login</h3>\r\n");
       out.write("\t\t\t\t<br>\r\n");
-      out.write("                                <form class=\"text-center\" style=\"font-size:20px\" method=\"put\" action=\"loginServlet\">\r\n");
-      out.write("\t\t\t\t\t<p><span>Username</span> <input type=\"text\" name=\"username\"><br><br>\r\n");
+      out.write("                                <form class=\"text-center\" style=\"font-size:20px\" method=\"post\" action=\"LoginCheck\">\r\n");
+      out.write("\t\t\t        ");
+
+                                String m=(String)session.getAttribute("msg");
+                                if(m!=null){
+                                
+      out.write("\r\n");
+      out.write("                                    <div class=\"panel\">\r\n");
+      out.write("                                        <div class=\"panel-body bg-danger text-center\">\r\n");
+      out.write("                                            ");
+      out.print(m);
+      out.write("\r\n");
+      out.write("                                        </div>\r\n");
+      out.write("                                    </div>\r\n");
+      out.write("                                        <br>\r\n");
+      out.write("                                ");
+   
+                                    session.setAttribute("msg",null);
+                                }
+                                
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("                                    <p><span>Username</span> <input type=\"text\" name=\"username\"><br><br>\r\n");
       out.write("\t\t\t\t\t<span>Password</span> <input type=\"password\" name=\"password\"></p>\r\n");
-      out.write("\t\t\t\t\t<a href=\"\">Forgot Password</a><br><br>\r\n");
-      out.write("\t\t\t\t\t<input type=\"submit\" name=\"\" value=\"GO\"style=\"border-radius: 30px; width: 200px;\">\r\n");
+      out.write("                                    <a href=\"\" style=\"color:#6eff00\">Forgot Password</a><br><br>\r\n");
+      out.write("\t\t\t\t\t<input type=\"submit\" name=\"\" value=\"GO\"style=\"border-radius: 30px; width: 200px; \">\r\n");
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\t\r\n");

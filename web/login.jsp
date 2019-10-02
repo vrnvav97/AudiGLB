@@ -35,6 +35,9 @@
 			height: 320px;
 			color: #fff;
 		}
+                input[type="submit"]:hover {
+                box-shadow: 0px 3px 5px 1px #6eff00;
+}
 	</style>
 </head>
 <body>
@@ -68,8 +71,8 @@
 
                                     <p><span>Username</span> <input type="text" name="username"><br><br>
 					<span>Password</span> <input type="password" name="password"></p>
-					<a href="">Forgot Password</a><br><br>
-					<input type="submit" name="" value="GO"style="border-radius: 30px; width: 200px;">
+                                    <a href="" style="color:#6eff00">Forgot Password</a><br><br>
+					<input type="submit" name="" value="GO"style="border-radius: 30px; width: 200px; ">
 				</form>
 			</div>
 		</div>	

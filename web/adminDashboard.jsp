@@ -79,18 +79,18 @@
 </head>
 <body>
 	<div class="py-3 container-fluid" style="background-color: #592106;margin: 0px;display: inline-block;">
-		<div class="text-center" style="width: 80%;float: left;">
+		<div class="text-center" style="width: 70%;float: left;">
 				<h2 style="color: white; font-family: Times New Roman;">G L Bajaj Institute of Technology and Management</h2>
 		</div>
-		<div style="width: 20%;float: right;color: #fff;">
+		<div style="width: 30%;float: right;color: #fff;">
 			
 			<!-- <a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
-                        <p class="navbar">Welcome:<%=(String)h.get("name")%></p>
-			<p class="navbar">hi</p>
-			<p class="navbar">hi</p>
+<!--                        <p class="navbar"></p>-->
+			<p class="navbar">Logout</p>
+			<p class="navbar"><%=(String)h.get("name")%></p>
 			<p class="navbar"><i class="fa fa-bell" aria-hidden="true" ><span class="badge">1</span></i></p>
 		</div>
 	</div>

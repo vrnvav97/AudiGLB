@@ -45,6 +45,11 @@
 			width: 150px;
 
 		}
+                .radio
+                {
+                    font-size: 14px;
+                    padding: 8px;
+                }
 	</style>
 </head>
 <body>
@@ -74,30 +79,28 @@
 					<option>CSE - Computer Science & Engineering</option>
 					<option>IT - Information Technology</option>
 					<option>MCA - Master of Computer Applications</option>
-					<option>1st YR - </option>
+					<option>1st YR -  Applied Sciences</option>
 					<option>ECE - Electornics & Communication Engineering</option>
 					<option>EE - Electronics Engineering</option>
 					<option>CE - Civil Enginnering</option>
 					<option>MBA - Master of Business Administration</option>
-                                        <option>PGDM</option>
-					<option>Training & Placement</option>
+                                        <option>PGDM - Post Graduate Diploma in Management</option>
+					<option>TNP - Training & Placement</option>
 					<option>BBA - Bachelor of Business Administration</option>
-					<option>BCA - Master of Computer Applications</option>
+					<option>BCA - Bachelor of Computer Applications</option>
                                         <option>College</option>
                                         <option>Other</option>	
 				</select>
-				<label class="label">Name of Event</label>
+                                <label class="label">Name of Event</label>
 				<input type="text" name="eventName"/>
-				<label class="label">Type of Event</label>
-				<input type="radio" class="typeOfEvent" name="One" value="One  " checked="true">  Departmental
-				<input type="radio" class="typeOfEvent" name="Two" value="Two  ">  Inter Departmental
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="typeOfEvent" name="Three" value="Three  ">  Inter College
-                                <input type="radio" class="typeOfEvent" name="Three" value="Three  ">  Other
                                 <br>
+				<label class="label">Type of Event</label>
+                                <div class="text-center">
+                                    <input type="radio" class="radio" name="typeOfEvent" name="One" value="One" checked="true" ><label class="radio">Departmental</label>
+                                    <input type="radio" class="radio" name="typeOfEvent" name="Two" value="Two" ><label class="radio">Inter Departmental</label>
+                                    <input type="radio" class="radio" name="typeOfEvent" name="Three" value="Three" ><label class="radio">Inter College</label>
+                                    <input type="radio" class="radio" name="typeOfEvent" name="Four" value="Four" ><label class="radio">Other</label>
+                                </div>
 			        <label class="label">Chief Guest of the Event</label>
 				<input type="text" name="eventChiefGuest"/>
 				<div class="form-group">

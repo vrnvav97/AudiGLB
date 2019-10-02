@@ -3,6 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.ResultSetMetaData;
+import java.sql.ResultSet;
+import java.util.HashMap;
 
 public final class userDashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -40,6 +43,13 @@ public final class userDashboard_jsp extends org.apache.jasper.runtime.HttpJspBa
       out = pageContext.getOut();
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+
+    HashMap h=(HashMap)session.getAttribute("UserDetails");
+    if(h!=null){
 
       out.write("\r\n");
       out.write("\r\n");
@@ -124,7 +134,9 @@ public final class userDashboard_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a>\r\n");
       out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a>\r\n");
       out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a> -->\r\n");
-      out.write("\t\t\t<p class=\"navbar\">hii</p>\r\n");
+      out.write("\t\t\t<p class=\"navbar\">Welcome:");
+      out.print((String)h.get("name"));
+      out.write("</p>\r\n");
       out.write("\t\t\t<p class=\"navbar\">hi</p>\r\n");
       out.write("\t\t\t<p class=\"navbar\">hi</p>\r\n");
       out.write("\t\t\t<p class=\"navbar\"><i class=\"fa fa-bell\" aria-hidden=\"true\" ><span class=\"badge\">1</span></i></p>\r\n");
@@ -132,7 +144,7 @@ public final class userDashboard_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\t</div>\r\n");
       out.write("\t\t<div class=\"container\">\r\n");
       out.write("\t\t\t\r\n");
-      out.write("\t\t\t<a href=\"forms.html\">\r\n");
+      out.write("\t\t\t<a href=\"forms.jsp\">\r\n");
       out.write("\t\t\t\t<div class=\"box\">\r\n");
       out.write("\t\t\t\t\t<div class=\"box-inner\">\r\n");
       out.write("\t\t\t\t\t<h3 class=\"text-center\">Book Audi</h3>\r\n");
@@ -171,7 +183,13 @@ public final class userDashboard_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("<!-- <script src=\"https://use.fontawesome.com/5b68f82424.js\"></script> -->\r\n");
       out.write("<script type=\"text/javascript\" src=\"js/font-awesome.js\"></script>\r\n");
       out.write("</body>\r\n");
-      out.write("</html>");
+      out.write("</html>\r\n");
+
+    }else{
+        session.setAttribute("msg","Plz Login First");
+        response.sendRedirect("login.jsp");
+    }
+
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
