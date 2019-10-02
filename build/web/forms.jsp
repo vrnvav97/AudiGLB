@@ -65,7 +65,7 @@
 			<a href="" class="navbar">hi</a> -->
 			<p class="navbar">hii</p>
 			<p class="navbar">hi</p>
-			<p class="navbar">hi</p>
+                        <p class="navbar"><%=(String)h.get("name")%></p>
 			<p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>
 		</div>
 	</div>

@@ -112,7 +112,9 @@ public final class forms_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a> -->\r\n");
       out.write("\t\t\t<p class=\"navbar\">hii</p>\r\n");
       out.write("\t\t\t<p class=\"navbar\">hi</p>\r\n");
-      out.write("\t\t\t<p class=\"navbar\">hi</p>\r\n");
+      out.write("                        <p class=\"navbar\">");
+      out.print((String)h.get("name"));
+      out.write("</p>\r\n");
       out.write("\t\t\t<p class=\"navbar\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i></p>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
