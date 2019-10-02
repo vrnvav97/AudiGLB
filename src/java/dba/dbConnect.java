@@ -20,8 +20,18 @@ public class dbConnect {
           st=c.createStatement();  
         
           checkAdLogin=c.prepareStatement("select * from loginDetails where username=? and password=?");
+<<<<<<< HEAD
           insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
+=======
+<<<<<<< HEAD
+          insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
+       
+=======
+       //   insertBooking=c.prepareStatement("insert into booking_info values(?,?,?,?,?,?,?,?,?)");
+        viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
+>>>>>>> 0c86cd9df15d0958e24b8b07c6d8811ee8cb9908
       }catch(Exception ex){
           ex.printStackTrace();
       }

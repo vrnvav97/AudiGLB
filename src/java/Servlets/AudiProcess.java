@@ -25,6 +25,34 @@ public class AudiProcess extends HttpServlet {
                 System.out.println(request.getParameter("eventName"));
         try{
                        
+<<<<<<< HEAD
+=======
+//            HashMap h=(HashMap)session.getAttribute("UserDetails");
+//            String username=(String)h.get("username");
+//            
+//            String nameOfDepartment=request.getParameter("nameOfDepartment");
+//            String eventName=request.getParameter("eventName");
+//            String typeOfEvent=request.getParameter("typeOfEvent");
+//            String eventChiefGuest=request.getParameter("eventChiefGuest");
+//           
+//            String eventDate=request.getParameter("eventDate");
+//            java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
+//            java.util.Date dt=sdf.parse(eventDate);
+//            java.sql.Date sdt=new java.sql.Date(dt.getTime());
+//            
+//            String usr_time1=request.getParameter("time1");
+//            Time time1 = Time.valueOf( usr_time1 );
+//            String usr_time2=request.getParameter("time2");
+//            Time time2 = Time.valueOf( usr_time2 );
+//            
+//            String eventGather=request.getParameter("eventGathering");
+//            int eventGathering=Integer.parseInt(eventGather);
+//            System.out.println(username+" "+nameOfDepartment+" "+eventName+" "+typeOfEvent+" "+eventChiefGuest+" "+sdt+" "+time1+" "+time2+" "+String.valueOf(eventGathering));
+//            
+            
+            
+<<<<<<< HEAD
+>>>>>>> 0c86cd9df15d0958e24b8b07c6d8811ee8cb9908
             HashMap h=(HashMap)session.getAttribute("UserDetails");
             String username=(String)h.get("username");
             String nameOfDepartment=(String)request.getParameter("nameOfDepartment");
@@ -42,8 +70,14 @@ public class AudiProcess extends HttpServlet {
            String eventGather=request.getParameter("eventGathering");
            int eventGathering=Integer.parseInt(eventGather);
             dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
+<<<<<<< HEAD
 
 
+=======
+=======
+         /*   dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
+>>>>>>> 0c86cd9df15d0958e24b8b07c6d8811ee8cb9908
             if(db==null){
                 db=new dba.dbConnect();
                 session.setAttribute("db", db);
@@ -75,7 +109,16 @@ public class AudiProcess extends HttpServlet {
                response.sendRedirect("home.jsp");
             }*/
            }catch(Exception e){
+<<<<<<< HEAD
                 session.setAttribute("msg","error!!!");
+=======
+<<<<<<< HEAD
+               e.printStackTrace();
+=======
+               System.out.println(e);
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
+               session.setAttribute("msg","error!!!");
+>>>>>>> 0c86cd9df15d0958e24b8b07c6d8811ee8cb9908
                response.sendRedirect("login.jsp");
         }
     }
