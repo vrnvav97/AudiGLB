@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="label">Expected Gathering</label>
-                                    <input type="number" name="eventGathering" required>
+                                    <input type="text" pattern="^[_0-9]{1,}$" name="eventGathering" required>
                                 </div>
                                 <center> <div  text-align="center" class="form-group">
                                         <input type="submit" class="btn-success" name="submit" value="Book Audi">

@@ -107,19 +107,11 @@
             String eventChiefGuest=request.getParameter("eventChiefGuest");
            
             String eventDate=request.getParameter("eventDate");
-          //  java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
-          //  java.util.Date dt=sdf.parse(eventDate);
-          //  java.sql.Date sdt=new java.sql.Date(dt.getTime());
             
-            String usr_time1=request.getParameter("usr_time1");
-           // Time time1 = Time.valueOf( usr_time1 );
-            String usr_time2=request.getParameter("usr_time2");
-            //Time time2 = Time.valueOf( usr_time2 );
-            
-          //  String eventGathering=request.getParameter("eventGathering");
-           // int eventGathering=Integer.parseInt(eventGather);
-            
-            
+            String usr_time1=request.getParameter("time1");
+            String usr_time2=request.getParameter("time2");
+            String eventGathering=request.getParameter("eventGathering");
+           
         %>
         
 	<div class="container" >
@@ -144,18 +136,20 @@
                                           <font size="4" color="green"><%=eventDate %></font> <br>
                                               <label class="label">Time</label>
                                               
-                                          <font size="4" color="green"><%=usr_time1 %></font> To 
+                                          <font size="4" color="green"><%=usr_time1 %></font>&nbsp;&nbsp; To &nbsp;&nbsp;
                                           <font size="4" color="green"><%=usr_time2 %></font> <br>
                                           
                                               <label class="label">Expected Gathering</label>
-                                         <br><br>
-                                          <input type='hidden' name='nameOfDepartment' value=value="<%=nameOfDepartment%>>
-                                          <input type='hidden' name='eventName' value=value="<%=eventName%>>
-                                          <input type='hidden' name='typeOfEvent' value=value="<%=typeOfEvent%>>
-                                          <input type='hidden' name='eventChiefGuest' value=value="<%=eventChiefGuest%>>
-                                          <input type='hidden' name='eventDate' value=value="<%=eventDate%>>
-                                          <input type='hidden' name='usr_time1' value=value="<%=usr_time1%>>
-                                          <input type='hidden' name='usr_time2' value=value="<%=usr_time2%>>
+                                          <font size="4" color="green"><%=eventGathering %></font> <br><br>
+                                          
+                                          <input type='hidden' name='nameOfDepartment' value='<%=nameOfDepartment%>'>
+                                          <input type='hidden' name='eventName' value='<%=eventName%>'>
+                                          <input type='hidden' name='typeOfEvent' value='<%=typeOfEvent%>'>
+                                          <input type='hidden' name='eventChiefGuest' value='<%=eventChiefGuest%>'>
+                                          <input type='hidden' name='eventDate' value='<%=eventDate%>'>
+                                          <input type='hidden' name='usr_time1' value='<%=usr_time1%>'>
+                                          <input type='hidden' name='usr_time2' value='<%=usr_time2%>'>
+                                          <input type='hidden' name='eventGathering' value='<%=eventGathering%>'>
                                             <center> 
 
                                               <div  text-align="center" class="form-group">
