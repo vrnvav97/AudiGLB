@@ -49,12 +49,32 @@ public class AudiProcess extends HttpServlet {
 //            
             
             
+<<<<<<< HEAD
+            HashMap h=(HashMap)session.getAttribute("UserDetails");
+            String username=(String)h.get("username");
+            String nameOfDepartment=(String)request.getParameter("nameOfDepartment");
+            String eventName=request.getParameter("eventName");
+            String typeOfEvent=request.getParameter("typeOfEvent");
+            String eventChiefGuest=request.getParameter("eventChiefGuest");
+            String eventDate=request.getParameter("eventDate");
+            java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("yyyy-MM-dd");
+            java.util.Date dt=sdf.parse(eventDate);
+            java.sql.Date sdt=new java.sql.Date(dt.getTime());
+            
+           String usr_time1=request.getParameter("usr_time1");
+            
+            String usr_time2=request.getParameter("usr_time2");
+           String eventGather=request.getParameter("eventGathering");
+           int eventGathering=Integer.parseInt(eventGather);
+            dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
+=======
          /*   dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
             if(db==null){
                 db=new dba.dbConnect();
                 session.setAttribute("db", db);
             }
-            String s=db.insertAudiBookigProcess(nameOfDepartment,eventName,typeOfEvent,eventChiefGuest,sdt,time1,time2,eventGathering,username);
+            String s=db.insertAudiBookigProcess(nameOfDepartment,eventName,typeOfEvent,eventChiefGuest,sdt,usr_time1,usr_time2,eventGathering,username);
            /* if(s.equalsIgnoreCase("Success")){
                HashMap h=new HashMap();
                h.put("email",email);
@@ -81,7 +101,11 @@ public class AudiProcess extends HttpServlet {
                response.sendRedirect("home.jsp");
             }*/
            }catch(Exception e){
+<<<<<<< HEAD
+               e.printStackTrace();
+=======
                System.out.println(e);
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
                session.setAttribute("msg","error!!!");
                response.sendRedirect("login.jsp");
         }

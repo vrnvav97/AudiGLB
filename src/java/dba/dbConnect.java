@@ -20,8 +20,13 @@ public class dbConnect {
           st=c.createStatement();  
         
           checkAdLogin=c.prepareStatement("select * from loginDetails where username=? and password=?");
+<<<<<<< HEAD
+          insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
+       
+=======
        //   insertBooking=c.prepareStatement("insert into booking_info values(?,?,?,?,?,?,?,?,?)");
         viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
+>>>>>>> e3dc6bd398a6ad3df7d9595241aaa453a7e1805d
       }catch(Exception ex){
           ex.printStackTrace();
       }
@@ -42,15 +47,15 @@ public class dbConnect {
       }
    }  
   public String insertAudiBookigProcess(String nameOfDepartment,String eventName,String typeOfEvent,String eventChiefGuest,
-          java.sql.Date sdt,java.sql.Time time1,java.sql.Time time2,int eventGathering,String username){
+          java.sql.Date sdt,String time1,String time2,int eventGathering,String username){
       try {
           insertBooking.setString(1,nameOfDepartment);
           insertBooking.setString(2,eventName);
           insertBooking.setString(3,typeOfEvent);
           insertBooking.setString(4,eventChiefGuest);
           insertBooking.setDate(5,sdt);
-          insertBooking.setTime(6,time1);
-          insertBooking.setTime(7,time2);
+          insertBooking.setString(6,time1);
+          insertBooking.setString(7,time2);
           insertBooking.setInt(8,eventGathering);
           insertBooking.setString(9,username);
           int x=insertBooking.executeUpdate();
