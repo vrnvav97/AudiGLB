@@ -100,28 +100,7 @@
                             <% } %>
 		</div>
 	</div>
-        <%
-            String nameOfDepartment=request.getParameter("nameOfDepartment");
-            String eventName=request.getParameter("eventName");
-            String typeOfEvent=request.getParameter("typeOfEvent");
-            String eventChiefGuest=request.getParameter("eventChiefGuest");
-           
-            String eventDate=request.getParameter("eventDate");
-          //  java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
-          //  java.util.Date dt=sdf.parse(eventDate);
-          //  java.sql.Date sdt=new java.sql.Date(dt.getTime());
-            
-            String usr_time1=request.getParameter("usr_time1");
-           // Time time1 = Time.valueOf( usr_time1 );
-            String usr_time2=request.getParameter("usr_time2");
-            //Time time2 = Time.valueOf( usr_time2 );
-            
-          //  String eventGathering=request.getParameter("eventGathering");
-           // int eventGathering=Integer.parseInt(eventGather);
-            
-            
-        %>
-        
+       
 	<div class="container" >
                 <div class="row">
                     <div class="column left" style="background-color:#ffc107;">
@@ -133,29 +112,23 @@
                                   <form action="bookAudiProcess" method="post">
                                           <label class="label">Name of Department</label>
 
-                                          <font size="4" color="green" ><%=nameOfDepartment %></font> <br>
+                                          <font size="4" color="green" ><%=request.getParameter("nameOfDepartment") %></font> <br>
                                           <label class="label">Name of Event</label>
-                                          <font size="4" color="green" ><%=eventName %></font> <br>
+                                          <font size="4" color="green" ><%=request.getParameter("eventName") %></font> <br>
                                           <label class="label">Type of Event</label>
-                                          <font size="4" color="green"><%=typeOfEvent %></font> <br>
+                                          <font size="4" color="green"><%=request.getParameter("typeOfEvent") %></font> <br>
                                           <label class="label">Chief Guest of the Event</label>
-                                          <font size="4" color="green"><%=eventChiefGuest %></font> <br>
+                                          <font size="4" color="green"><%=request.getParameter("eventChiefGuest") %></font> <br>
                                               <label class="label">Date</label>
-                                          <font size="4" color="green"><%=eventDate %></font> <br>
+                                              <font size="4" color="green"><%=request.getParameter("eventDate") %></font> <br>
                                               <label class="label">Time</label>
                                               
-                                          <font size="4" color="green"><%=usr_time1 %></font> To 
-                                          <font size="4" color="green"><%=usr_time2 %></font> <br>
+                                              <font size="4" color="green"><%=request.getParameter("time1") %></font> To 
+                                              <font size="4" color="green"><%=request.getParameter("time2") %></font> <br>
                                           
                                               <label class="label">Expected Gathering</label>
+                                              <font size="4" color="green"><%=request.getParameter("eventGathering") %></font>
                                          <br><br>
-                                          <input type='hidden' name='nameOfDepartment' value=value="<%=nameOfDepartment%>>
-                                          <input type='hidden' name='eventName' value=value="<%=eventName%>>
-                                          <input type='hidden' name='typeOfEvent' value=value="<%=typeOfEvent%>>
-                                          <input type='hidden' name='eventChiefGuest' value=value="<%=eventChiefGuest%>>
-                                          <input type='hidden' name='eventDate' value=value="<%=eventDate%>>
-                                          <input type='hidden' name='usr_time1' value=value="<%=usr_time1%>>
-                                          <input type='hidden' name='usr_time2' value=value="<%=usr_time2%>>
                                             <center> 
 
                                               <div  text-align="center" class="form-group">
