@@ -76,16 +76,28 @@
 		<div class="text-center" style="width: 80%;float: left;">
 				<h2 style="color: white; font-family: Times New Roman;">G L Bajaj Institute of Technology and Management</h2>
 		</div>
-		<div style="width: 20%;float: right;color: #fff;">
+		<div style="width: 20%;float: right;color: #fff; ">
 			
 			<!-- <a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
-			<p class="navbar">hii</p>
+<!--			<p class="navbar">hii</p>-->
 			<p class="navbar">hi</p>
-			<p class="navbar">hi</p>
-			<p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>
+                        <p class="navbar"><%= (String)h.get("name")%></p>
+<!--			<p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>-->
+                           <%
+                             String temp = (String)h.get("post");
+                             if (temp.equals("admin"))
+                             {
+                         %>
+                         <%= "<p class='navbar'><a href='adminDashboard.jsp' ><i class='fa fa-home' aria-hidden='true' style='font-size:x-large'></i></a></p>" %>
+                          <%   }
+                            else
+                            {
+                            %>
+                            <%= "<p class='navbar'><a href='userDashboard.jsp' ><i class='fa fa-home' aria-hidden='true' style='font-size:x-large'></i></a></p>" %>
+                            <% } %>
 		</div>
 	</div>
         <%
@@ -119,6 +131,7 @@
                                   <h3 class="text-center" style="font-size: 3em;">Confirm</h3>
                                   <form action="bookAudiProcess" method="post">
                                           <label class="label">Name of Department</label>
+<<<<<<< HEAD
                                           <font size="4" color="green" ><%=nameOfDepartment %></font> <br>
                                           <label class="label">Name of Event</label>
                                           <font size="4" color="green" ><%=eventName %></font> <br>
@@ -143,6 +156,25 @@
                                           <input type='hidden' name='usr_time1' value=value="<%=usr_time1%>>
                                           <input type='hidden' name='usr_time2' value=value="<%=usr_time2%>>
                                             <center> 
+=======
+                                          <font size="4" color="green"><%=request.getParameter("nameOfDepartment")%></font> <br>
+                                          <label class="label">Name of Event</label>
+                                          <font size="4" color="green"><%=request.getParameter("eventName")%></font> <br>
+                                          <label class="label">Type of Event</label>
+                                          <font size="4" color="green"><%=request.getParameter("typeOfEvent")%></font> <br>
+                                          <label class="label">Chief Guest of the Event</label>
+                                          <font size="4" color="green"><%=request.getParameter("eventChiefGuest")%></font> <br>
+                                              <label class="label">Date</label>
+                                          <font size="4" color="green"><%=request.getParameter("eventDate")%></font> <br>
+                                              <label class="label">Time</label>
+                                              
+                                          <font size="4" color="green"><%=request.getParameter("time1")%></font> To 
+                                          <font size="4" color="green"><%=request.getParameter("time2")%></font> <br>
+                                          
+                                              <label class="label">Expected Gathering</label>
+                                              <font size="4" color="green"><%=request.getParameter("eventGathering")%></font> <br><br>
+                                          <center> 
+>>>>>>> baa7d774e5084cc5e53d0e0fcf297015c1f073b9
                                               <div  text-align="center" class="form-group">
                                                   <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
                                                   <input type="submit" class="btn-success" name="submit" value="Book Audi">
@@ -162,6 +194,11 @@
           var a = document.querySelector(".cancel");
           a.addEventListener('click',()=>{
               var result = confirm('Do you really want to Cancel Booking');
+              if (result===true)
+              {
+                  document.write("Your booking request has been cancelled !");
+//                  window.navigate(http://localhost:27016/AudiGLB/userDashboard.jsp);
+              }
           });
         </script>
 </body>
