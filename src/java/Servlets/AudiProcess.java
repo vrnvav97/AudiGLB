@@ -20,13 +20,11 @@ public class AudiProcess extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException
             {
            response.setContentType("text/html;charset=UTF-8");
-           PrintWriter out=null;
-           HttpSession session=null;
+           PrintWriter out =response.getWriter();;
+           HttpSession session=request.getSession();
+                System.out.println(request.getParameter("eventName"));
         try{
-            
-            session=request.getSession();
-            out=response.getWriter();
-            
+                       
             HashMap h=(HashMap)session.getAttribute("UserDetails");
             String username=(String)h.get("username");
             String nameOfDepartment=(String)request.getParameter("nameOfDepartment");
@@ -44,6 +42,8 @@ public class AudiProcess extends HttpServlet {
            String eventGather=request.getParameter("eventGathering");
            int eventGathering=Integer.parseInt(eventGather);
             dba.dbConnect db=(dba.dbConnect)session.getAttribute("db");
+
+
             if(db==null){
                 db=new dba.dbConnect();
                 session.setAttribute("db", db);
@@ -75,8 +75,7 @@ public class AudiProcess extends HttpServlet {
                response.sendRedirect("home.jsp");
             }*/
            }catch(Exception e){
-               e.printStackTrace();
-               session.setAttribute("msg","error!!!");
+                session.setAttribute("msg","error!!!");
                response.sendRedirect("login.jsp");
         }
     }
