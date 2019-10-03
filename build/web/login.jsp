@@ -1,5 +1,20 @@
-
+<%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    HashMap uh=(HashMap)session.getAttribute("UserDetails");
+    HashMap ah=(HashMap)session.getAttribute("AdminDetails");
+    if(uh!=null){
+        response.sendRedirect("userDashboard.jsp");
+    }
+    else if(ah!=null){
+        
+        response.sendRedirect("adminDashboard.jsp");
+    }
+    else{
+%>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,3 +109,7 @@
         </script>
 </body>
 </html>
+
+<%
+    }
+%>

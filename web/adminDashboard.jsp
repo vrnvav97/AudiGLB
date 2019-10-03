@@ -183,7 +183,7 @@
 </html>
 <%
     }else{
-        session.setAttribute("msg","Plz Login First");
+        session.setAttribute("msg","Please Login First");
         response.sendRedirect("login.jsp");
     }
 %>

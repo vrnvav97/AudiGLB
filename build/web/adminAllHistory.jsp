@@ -116,6 +116,7 @@
                                     <%   
                                        }else{
                                     %>   --%> 
+                                    
                                    &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
                           <%--          <%    
                                         }
@@ -144,7 +145,7 @@
                                                 <label class="label">Expected Gathering</label>
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                                 
-<!--                                            
+                                      
 
                                   
 						</div>

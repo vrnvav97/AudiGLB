@@ -11,8 +11,8 @@ import java.sql.Statement;
 
 public class dbConnect {
   private Connection c;
-  public Statement st;
-  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser,adminAllHis;
+  public Statement st,adminAllHis;
+  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser;
     public dbConnect(){
       try{
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -24,7 +24,7 @@ public class dbConnect {
         
           insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
-          adminAllHis = c.prepareStatement("Select * from audiDetails");
+          
       }catch(Exception ex){
           ex.printStackTrace();
       }
@@ -102,10 +102,12 @@ public class dbConnect {
   
   public ResultSet adminAllHistory ()
   {
+      
       ResultSet rs=null;
       try
       {
-       rs = adminAllHis.executeQuery();
+       adminAllHis = c.createStatement();
+       rs = adminAllHis.executeQuery("Select * from audiDetails");
       }
       catch (Exception e)
       {

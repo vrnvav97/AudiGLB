@@ -28,7 +28,7 @@
             session.invalidate();
             response.sendRedirect("login.jsp");
             }else{
-                session.setAttribute("msg","Plzz Login First!");
+                session.setAttribute("msg","Please Login First!");
                  response.sendRedirect("login.jsp");
             }
          %>

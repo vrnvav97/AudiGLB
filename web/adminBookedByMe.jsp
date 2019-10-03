@@ -2,7 +2,7 @@
 <%@page import="dba.dbConnect"%>
 <%@page import="java.util.HashMap"%>
 <%
-    HashMap h=(HashMap)session.getAttribute("UserDetails");
+    HashMap h=(HashMap)session.getAttribute("AdminDetails");
     if(h!=null){
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -85,7 +85,7 @@
 			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
                         <p class="navbar"><%=(String)h.get("name")%></p>
 <!--                        <p class="navbar"><i class="fa fa-home" aria-hidden="true" style="font-size: x-large"></i></p>-->
-                        <p class='navbar'><a href='userDashboard.jsp' ><i class='fa fa-home' aria-hidden='true' style='font-size:x-large'></i></a></p>
+                        <p class='navbar'><a href='adminDashboard.jsp' ><i class='fa fa-home' aria-hidden='true' style='font-size:x-large'></i></a></p>
 		</div>
 	</div>
 	<div class="container">

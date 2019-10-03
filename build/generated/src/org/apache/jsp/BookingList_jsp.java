@@ -47,7 +47,7 @@ public final class BookingList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("\t<title>Confirm Form</title>\r\n");
+      out.write("\t<title>Booking List</title>\r\n");
       out.write("\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\r\n");
       out.write("\t<style type=\"text/css\">\r\n");
       out.write("\t\tbody\r\n");
