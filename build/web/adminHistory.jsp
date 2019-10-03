@@ -118,7 +118,7 @@
                                     session.setAttribute("msg",null);
                                 }
                         %>
-                    <a href="">
+                    <a href="adminBookedByMe.jsp">
 				<div class="box">
 					<div class="box-inner">
 					<h3 class="text-center">Booked by Me</h3>
@@ -130,7 +130,7 @@
 				</div>
 			</a>
 
-			<a href="">
+			<a href="adminAllHistory.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h3 class="text-center">All History</h3>
