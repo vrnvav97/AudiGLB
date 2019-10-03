@@ -145,7 +145,7 @@
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                                 
                                                 <label class="label">Allocated Audi</label>
-                                                <font size="4" color="green">example_Hall Name</font> <br>
+                                                <font size="4" color="green"><%= rs.getString("audiAssigned")%></font> <br>
 
                                   
 						</div>
