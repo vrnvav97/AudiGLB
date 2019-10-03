@@ -50,7 +50,6 @@ public class LoginCheck extends HttpServlet {
                     }
             }
             else{
-               
                session.setAttribute("msg","Invalid Credentials!");
                response.sendRedirect("login.jsp");
             }
