@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Confirm Form</title>
+	<title>Booking History</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
 		body
@@ -116,7 +116,45 @@
                                     <%   
                                        }else{
                                     %>   --%> 
-                                   &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
+                                    <%
+                                        String audi = rs.getString("audiAssigned");
+                                        
+                                        if(audi.equalsIgnoreCase("SBG")){
+                                    %>
+                                   &nbsp;&nbsp;<img src="img/SBG.jpg" width="150" height="220" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("SHD")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/SHD.jpg" width="150" height="220" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("Audi01")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/Audi01.jpg" width="150" height="220" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("Audi02")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/Audi02.jpg" width="150" height="220" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("PGDM")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/PGDMHall.jpg" width="150" height="220" padding-top: 25px;>  
+                                     
+                                      <%
+                                       }
+                                       else{
+                                      %>
+                                     &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     %>
                           <%--          <%    
                                         }
                                     %>  --%>
