@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Booking List</title>
+	<title>Active Booking</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
 		body
@@ -84,7 +84,7 @@
 	<div class="container">
 		<div class="panel panel-default text center">
 			<div class="panel-heading text-center">
-                            <h3>All Bookings</h3>
+                            <h3>Active Booking</h3>
 			</div>
 		</div>
 	</div>
@@ -131,10 +131,12 @@
 
                                                 <label class="label">Expected Gathering</label>
                                                 <font size="4" color="green">example_500</font> <br>
+                                                <label class="label">Allocated Audi</label>
+                                                <font size="4" color="green">example_Hall Name</font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
+                                                    
                                                 </div>
                                             </center>
                                   
@@ -178,10 +180,12 @@
 
                                                 <label class="label">Expected Gathering</label>
                                                 <font size="4" color="green">example_500</font> <br>
+                                                <label class="label">Allocated Audi</label>
+                                                <font size="4" color="green">example_Hall Name</font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
+                                                    
                                                 </div>
                                             </center>
                                   
@@ -225,10 +229,12 @@
 
                                                 <label class="label">Expected Gathering</label>
                                                 <font size="4" color="green">example_500</font> <br>
+                                                <label class="label">Allocated Audi</label>
+                                                <font size="4" color="green">example_Hall Name</font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
+                                                    
                                                 </div>
                                             </center>
                                   
@@ -272,10 +278,12 @@
 
                                                 <label class="label">Expected Gathering</label>
                                                 <font size="4" color="green">example_500</font> <br>
+                                                <label class="label">Allocated Audi</label>
+                                                <font size="4" color="green">example_Hall Name</font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
+                                                    
                                                 </div>
                                             </center>
                                   
