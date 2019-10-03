@@ -79,20 +79,5 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rGF8kKXvvmYtT4zNGqicXRjvuAnmmbvPZX.109773641.100148163.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163vH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSXgi164MCGG3u5RKXaBGVBabmxQTVRAAVECCPSEWY5UMdx9nDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script>
-            var a = [`#6eff00`,`#fff700`,`#00ffad`];
-            var b = parseInt((Math.random()*3)+0);
-            var c = document.querySelector('.forgotPass');
-            var d = document.querySelector('.submitButton');
-            c.setAttribute('style','color:'+a[b]);
-            d.onmouseover = function()
-            {
-                this.style.boxShadow = '0px 3px 5px 1px ' + a[b];
-            }
-            d.onmouseout = function()
-            {
-                this.style.boxShadow = '0px 0px 0px 0px ' + a[b];
-            }
-        </script>
 </body>
 </html>
