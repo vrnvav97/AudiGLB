@@ -52,7 +52,7 @@ public class LoginCheck extends HttpServlet {
             }
             else{
                
-               session.setAttribute("msg","emailId or Password Is Wrong!!");
+               session.setAttribute("msg","Invalid Credentials!");
                response.sendRedirect("login.jsp");
             }
            }catch(Exception e){
