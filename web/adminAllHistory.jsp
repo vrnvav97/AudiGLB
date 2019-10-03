@@ -146,7 +146,8 @@
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                                 
                                       
-
+                                                    <label class="label">Booked By</label>
+                                                <font size="4" color="green"><%= rs.getString("username")%></font> <br>
                                   
 						</div>
 					</form>
