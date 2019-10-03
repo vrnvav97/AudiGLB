@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class dbConnect {
   private Connection c;
   public Statement st;
-  private PreparedStatement checkAdLogin,insertBooking,viewHistory;
+  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser;
     public dbConnect(){
       try{
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -20,7 +20,8 @@ public class dbConnect {
           st=c.createStatement();  
         
           checkAdLogin=c.prepareStatement("select * from loginDetails where username=? and password=?");
-
+          getUser=c.prepareStatement("select * from loginDetails where username=?");
+        
           insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
       }catch(Exception ex){
@@ -67,7 +68,19 @@ public class dbConnect {
           return "Exception";
       }
    }
-
+  public ResultSet getUser(String e){
+      try {
+          getUser.setString(1,e);
+          ResultSet rs=getUser.executeQuery();
+          if(rs.next()){
+             return rs;
+          }else{
+             return null;
+          }
+      }catch (SQLException ex) {
+          return null;
+      }
+   }
   public PreparedStatement getCheckLogin() {
         return checkAdLogin;
    }

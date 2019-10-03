@@ -69,7 +69,7 @@
 
                                     <p><span>Username</span> <input type="text" name="username"><br><br>
 					<span>Password</span> <input type="password" name="password"></p>
-                                    <a class="forgotPass" href="">Forgot Password</a><br><br>
+                                    <a class="forgotPass" href="forgotPassword.jsp">Forgot Password</a><br><br>
                                     <input class="submitButton" type="submit" name="" value="GO" style="border-radius: 30px; width: 200px; ">
 				</form>
 			</div>
