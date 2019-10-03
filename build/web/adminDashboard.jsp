@@ -138,7 +138,8 @@
 				</div>
 			</a>
 
-			<a href="history.jsp">
+
+			<a href="adminHistory.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h3 class="text-center">History</h3>

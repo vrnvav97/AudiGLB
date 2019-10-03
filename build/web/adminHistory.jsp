@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard</title>
+	<title>Admin History Dashboard</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
 		body
@@ -116,13 +116,14 @@
                                     session.setAttribute("msg",null);
                                 }
                         %>
-                    <a href="forms.jsp">
+                    <a href="">
 				<div class="box">
 					<div class="box-inner">
-					<h3 class="text-center">Book Audi</h3>
+					<h3 class="text-center">Booked by Me</h3>
 					</div>
 					<div class="box-inner-down">
-						<i class="fa fa-plus-circle icon" aria-hidden="true" style="font-size: 8em"></i>
+						<i class="fa fa-user icon" aria-hidden="true" style="font-size: 8em"></i>
+                  
 					</div>
 				</div>
 			</a>
@@ -130,50 +131,14 @@
 			<a href="">
 				<div class="box">
 					<div class="box-inner">
-						<h3 class="text-center">Active Booking</h3>
+						<h3 class="text-center">All History</h3>
 					</div>
 					<div class="box-inner-down">
-						<i class="fa fa-bookmark icon" aria-hidden="true" style="font-size: 8em"></i>
+                                         
+						<i class="fa fa-users icon" aria-hidden="true" style="font-size: 8em"></i>
 					</div>
 				</div>
-			</a>
-
-
-			<a href="adminHistory.jsp">
-				<div class="box">
-					<div class="box-inner">
-						<h3 class="text-center">History</h3>
-					</div>
-					<div class="box-inner-down">
-					<i class="fa fa-history icon" aria-hidden="true" style="font-size: 8em"></i>
-					</div>
-				</div>
-			</a>
-                        <a href="">
-				<div class="box">
-					<div class="box-inner">
-						<h4 class="text-center">View Pending Request</h4>
-					</div>
-					<div class="box-inner-down">
-					<i class="fa fa-exclamation-triangle icon " aria-hidden="true" style="font-size: 8em"></i>
-                       
-					</div>
-				</div>
-			</a>
-                    
-                    <a href="">
-				<div class="box">
-					<div class="box-inner">
-						<h4 class="text-center">View Cancelled Request</h4>
-					</div>
-					<div class="box-inner-down">
-					<i class="fa fa-times-circle icon" aria-hidden="true" style="font-size: 8em"></i>
-                                     
-					</div>
-				</div>
-			</a>
-                    
-                    
+			</a>                    
 		</div>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
