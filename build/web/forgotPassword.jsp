@@ -69,8 +69,10 @@
 
                                     <p><span>Username</span> <input type="text" name="username"><br><br>
 					
-                                    
-                                    <input class="submitButton" type="submit" name="" value="Submit" style="border-radius: 30px; width: 200px; ">
+                                    <div class="text-center">
+                                    <input class="submitButton" type="submit" name="" value="Submit" style="border-radius: 30px; width: 100px; margin-left: 20px;margin-right: 20px;">
+                                    <a href = "login.jsp" ><input class="backButton" type="button" name="" value="Back" style="border-radius: 30px; width: 100px;margin-left: 20px;margin-right: 20px; "></a>
+                                    </div>
 				</form>
 			</div>
 		</div>	
