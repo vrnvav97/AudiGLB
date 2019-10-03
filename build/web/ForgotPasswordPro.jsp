@@ -4,7 +4,7 @@
 <%@page import="javax.mail.internet.MimeMessage"%>
 <%@page import="javax.mail.*"%>
 <%@page import="java.util.Properties"%>
-<%@page import="java.sql.*"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,8 +24,9 @@
             if(rs!=null){
               String p=rs.getString("password");
               final  String SEmail=e;
-              final  String AEmail="asoftware092@gmail.com";
-              final  String APass="King@123";
+       
+              final String AEmail = "samrattechnologies01@gmail.com";
+              final String APass = "S@Tech123";
                 String sub="Forget Password Subject.";
                 String body="Your Password: "+p;
                 try{
