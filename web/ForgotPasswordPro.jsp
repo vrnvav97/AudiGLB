@@ -4,7 +4,7 @@
 <%@page import="javax.mail.internet.MimeMessage"%>
 <%@page import="javax.mail.*"%>
 <%@page import="java.util.Properties"%>
-<%@page import="java.sql.*"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
