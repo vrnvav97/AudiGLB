@@ -72,7 +72,7 @@
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
 <!--                        <p class='navbar'>hii</p>-->
-			<p class="navbar">Logout</p>
+			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
                         <p class="navbar"><%=(String)h.get("name")%></p>
                           
                          <%
