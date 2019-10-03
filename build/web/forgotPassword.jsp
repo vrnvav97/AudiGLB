@@ -32,7 +32,7 @@
 			background-color: #000;
 			opacity: 0.5;
 			width: 440px;
-			height: 320px;
+			height: 195px;
 			color: #fff;
 		}
 
