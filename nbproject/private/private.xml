@@ -3,6 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/ForgotPasswordPro.jsp</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/adminDashboard.jsp</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/src/java/Servlets/LoginCheck.java</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/Logout.jsp</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/adminHistory.jsp</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/login.jsp</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/forgotPassword.jsp</file>
+=======
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/confirmForm.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/history.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/adminHistory.jsp</file>
@@ -13,6 +22,7 @@
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/userDashboard.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/login.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/adminDashboard.jsp</file>
+>>>>>>> 43d9bdce71a39d96d930e88ab30df252f4a69f7e
         </group>
     </open-files>
 </project-private>
