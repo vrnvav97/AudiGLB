@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
- @MultipartConfig
 public class LoginCheck extends HttpServlet {
 
     protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException
@@ -51,8 +50,7 @@ public class LoginCheck extends HttpServlet {
                     }
             }
             else{
-               
-               session.setAttribute("msg","emailId or Password Is Wrong!!");
+               session.setAttribute("msg","Invalid Credentials!");
                response.sendRedirect("login.jsp");
             }
            }catch(Exception e){
