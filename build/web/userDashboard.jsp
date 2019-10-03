@@ -88,7 +88,7 @@
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
 <!--			<p class="navbar"></p>-->
-			<p class="navbar">Logout</p>
+			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
 			<p class="navbar"><%=(String)h.get("name")%></p>
 			<p class="navbar"><i class="fa fa-bell" aria-hidden="true" ><span class="badge">1</span></i></p>
 		</div>
