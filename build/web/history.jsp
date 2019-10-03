@@ -31,7 +31,7 @@
 			background-color: #000;
 			opacity: 0.9;
 			width: 1200px;
-			height: 600px;
+			height: 350px;
 			color: #fff;
 			overflow-y: scroll;
 		}
@@ -82,7 +82,7 @@
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
 <!--			<p class="navbar">hii</p>-->
-			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
+			<p class="navbar">hi</p>
                         <p class="navbar"><%=(String)h.get("name")%></p>
                         <p class="navbar"><i class="fa fa-home" aria-hidden="true" style="font-size: x-large"></i></p>
 		</div>
@@ -90,7 +90,7 @@
 	<div class="container">
 		<div class="panel panel-default text center">
 			<div class="panel-heading text-center">
-                            <h3>All Bookings</h3>
+                            <h3>All Bookings Booked By You</h3>
 			</div>
 		</div>
 	</div>
@@ -102,6 +102,7 @@
                            <%
                                dba.dbConnect db = new dba.dbConnect();
                                ResultSet rs = db.history((String)h.get("name"));
+                               int i = 1;
 			     while(rs.next()){
 			   %>
                         <hr style="background-color: #ffc107;">
@@ -122,29 +123,26 @@
 				<div class="col-lg-10">
 				    <form action="" class="form-horizontal">
 					<div class="form-group">
+                                            <label class="label">S No.</label>
+                                            <font size="4" color="green"><%= i++%></font>
                                             <label class="label">Name of Department</label>
-                                            <font size="4" color="green">example_CSE</font>
+                                            <font size="4" color="green"><%= rs.getString("nameOfDepartment")%></font>
                                             <label class="label">Name of Event</label>
-                                            <font size="4" color="green">example_Code-Auctor2K18</font>
+                                            <font size="4" color="green"><%= rs.getString("eventName")%></font>
                                             <label class="label">Type of Event</label>
-                                            <font size="4" color="green">example_two</font><br>
+                                            <font size="4" color="green"><%= rs.getString("typeOfEvent")%></font><br>
                                             <label class="label">Chief Guest of the Event</label>
-                                            <font size="4" color="green">example_OFFICIALMUKUL</font>
+                                            <font size="4" color="green"><%= rs.getString("eventChiefGuest")%></font>
                                                 <label class="label">Date</label>
-                                                <font size="4" color="green">example_21-09-19</font><br>
+                                                <font size="4" color="green"><%= rs.getString("eventDate")%></font><br>
                                                 <label class="label">Time</label>
 
-                                            <font size="4" color="green">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <font size="4" color="green">example_22:30</font>
+                                            <font size="4" color="green"><%= rs.getString("time1")%></font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <font size="4" color="green"><%= rs.getString("time2")%></font>
 
                                                 <label class="label">Expected Gathering</label>
-                                                <font size="4" color="green">example_500</font> <br>
-                                            <center> 
-                                                <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
-                                                </div>
-                                            </center>
+                                                <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
+
                                   
 						</div>
 					</form>
