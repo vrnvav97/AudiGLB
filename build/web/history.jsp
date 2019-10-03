@@ -99,7 +99,7 @@
 	</br>
         <div class="container">
             <div class="back">        
-			<section>
+			
                            <%
                                dba.dbConnect db = new dba.dbConnect();
                                ResultSet rs = db.history((String)h.get("name"));

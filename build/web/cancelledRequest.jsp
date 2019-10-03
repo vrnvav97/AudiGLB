@@ -100,7 +100,7 @@
             <div class="back">        
                        <%
                                dba.dbConnect db = new dba.dbConnect();
-                               ResultSet rs = db.pendingRequest();
+                               ResultSet rs = db.cancelledRequest();
                
 			     while(rs.next()){
                         %>    
@@ -133,7 +133,6 @@
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input type="button" class="btn-success"name="submit" value="Allow Audi">
                                                 </div>
                                             </center>

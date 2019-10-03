@@ -11,8 +11,12 @@ import java.sql.Statement;
 
 public class dbConnect {
   private Connection c;
-  public Statement st,adminAllHis;
+
+
+private Statement st,adminAllHis,viewPending,cancelledRequest;
+
   private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser;
+  
     public dbConnect(){
       try{
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -99,6 +103,37 @@ public class dbConnect {
       }
       return rs;
   }
+
+  public ResultSet pendingRequest ()
+  {
+      ResultSet rs=null;
+      try
+      {
+        viewPending = c.createStatement();
+       rs = viewPending.executeQuery("Select * from audiDetails where request =0");
+      }
+      catch (Exception e)
+      {
+          System.out.println ("Error occured");
+      }
+      return rs;
+  }
+  
+  public ResultSet cancelledRequest ()
+  {
+      ResultSet rs=null;
+      try
+      {
+        cancelledRequest = c.createStatement();
+       rs = cancelledRequest.executeQuery("Select * from audiDetails where request =2");
+
+      }
+      catch (Exception e)
+      {
+          System.out.println("Error occured");
+      }
+      return  rs;
+  }
   
   public ResultSet adminAllHistory ()
   {
@@ -108,6 +143,7 @@ public class dbConnect {
       {
        adminAllHis = c.createStatement();
        rs = adminAllHis.executeQuery("Select * from audiDetails");
+
       }
       catch (Exception e)
       {

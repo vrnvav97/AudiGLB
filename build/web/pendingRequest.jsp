@@ -90,7 +90,7 @@
 	<div class="container">
 		<div class="panel panel-default text center">
 			<div class="panel-heading text-center">
-                            <h3>All Bookings</h3>
+                            <h3>Audi Pending Request</h3>
 			</div>
 		</div>
 	</div>
@@ -98,45 +98,39 @@
 	</br>
         <div class="container">
             <div class="back">        
-			<section>
-                           <%--
+                       <%
+                               dba.dbConnect db = new dba.dbConnect();
+                               ResultSet rs = db.pendingRequest();
+               
 			     while(rs.next()){
-			   --%>
+                        %>    
                         <hr style="background-color: #ffc107;">
 			<div class="row">
 				<div class="col-lg-2">
-                                    <%--*            <%
-                                      if(rs.getBinaryStream("photo").read()!=-1){
-                                    %>
-                                   <img src="GetPhoto?email=<%=rs.getString("email")%>" width="120" height="150">                            
-                                    <%   
-                                       }else{
-                                    %>   --%> 
-                                   &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
-                          <%--          <%    
-                                        }
-                                    %>  --%>
+                                    
+                                   &nbsp;&nbsp;<img src="img/Logo.jpg" width="150" height="200" padding-top: 25px;>                           
+                         
 				</div>
 				<div class="col-lg-10">
 				    <form action="" class="form-horizontal">
 					<div class="form-group">
                                             <label class="label">Name of Department</label>
-                                            <font size="4" color="green">example_CSE</font>
+                                            <font size="4" color="green"><%= rs.getString("nameOfDepartment")%></font>
                                             <label class="label">Name of Event</label>
-                                            <font size="4" color="green">example_Code-Auctor2K18</font>
+                                            <font size="4" color="green"><%= rs.getString("eventName")%></font>
                                             <label class="label">Type of Event</label>
-                                            <font size="4" color="green">example_two</font><br>
+                                            <font size="4" color="green"><%= rs.getString("typeOfEvent")%></font><br>
                                             <label class="label">Chief Guest of the Event</label>
-                                            <font size="4" color="green">example_OFFICIALMUKUL</font>
+                                            <font size="4" color="green"><%= rs.getString("eventChiefGuest")%></font>
                                                 <label class="label">Date</label>
-                                                <font size="4" color="green">example_21-09-19</font><br>
+                                                <font size="4" color="green"><%= rs.getString("eventDate")%></font><br>
                                                 <label class="label">Time</label>
 
-                                            <font size="4" color="green">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <font size="4" color="green">example_22:30</font>
+                                            <font size="4" color="green"><%= rs.getString("time1")%></font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <font size="4" color="green"><%= rs.getString("time2")%></font>
 
                                                 <label class="label">Expected Gathering</label>
-                                                <font size="4" color="green">example_500</font> <br>
+                                                <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -149,147 +143,9 @@
 				</div>
 				 
 			</div>
-                                <hr style="background-color: #ffc107;">
-                        <div class="row">
-				<div class="col-lg-2">
-                                    <%--*            <%
-                                      if(rs.getBinaryStream("photo").read()!=-1){
+                        <%
+                                    }
                                     %>
-                                   <img src="GetPhoto?email=<%=rs.getString("email")%>" width="120" height="150">                            
-                                    <%   
-                                       }else{
-                                    %>   --%> 
-                                   &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
-                          <%--          <%    
-                                        }
-                                    %>  --%>
-				</div>
-				<div class="col-lg-10">
-				    <form action="" class="form-horizontal">
-					<div class="form-group">
-                                            <label class="label">Name of Department</label>
-                                            <font size="4" color="green">example_CSE</font>
-                                            <label class="label">Name of Event</label>
-                                            <font size="4" color="green">example_Code-Auctor2K18</font>
-                                            <label class="label">Type of Event</label>
-                                            <font size="4" color="green">example_two</font><br>
-                                            <label class="label">Chief Guest of the Event</label>
-                                            <font size="4" color="green">example_OFFICIALMUKUL</font>
-                                                <label class="label">Date</label>
-                                                <font size="4" color="green">example_21-09-19</font><br>
-                                                <label class="label">Time</label>
-
-                                            <font size="4" color="green">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <font size="4" color="green">example_22:30</font>
-
-                                                <label class="label">Expected Gathering</label>
-                                                <font size="4" color="green">example_500</font> <br>
-                                            <center> 
-                                                <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
-                                                </div>
-                                            </center>
-                                  
-						</div>
-					</form>
-				</div>
-				 
-			</div>
-                                <hr style="background-color: #ffc107;">
-                        <div class="row">
-				<div class="col-lg-2">
-                                    <%--*            <%
-                                      if(rs.getBinaryStream("photo").read()!=-1){
-                                    %>
-                                   <img src="GetPhoto?email=<%=rs.getString("email")%>" width="120" height="150">                            
-                                    <%   
-                                       }else{
-                                    %>   --%> 
-                                  &nbsp;&nbsp; <img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
-                          <%--          <%    
-                                        }
-                                    %>  --%>
-				</div>
-				<div class="col-lg-10">
-				    <form action="" class="form-horizontal">
-					<div class="form-group">
-                                            <label class="label">Name of Department</label>
-                                            <font size="4" color="green">example_CSE</font>
-                                            <label class="label">Name of Event</label>
-                                            <font size="4" color="green">example_Code-Auctor2K18</font>
-                                            <label class="label">Type of Event</label>
-                                            <font size="4" color="green">example_two</font><br>
-                                            <label class="label">Chief Guest of the Event</label>
-                                            <font size="4" color="green">example_OFFICIALMUKUL</font>
-                                                <label class="label">Date</label>
-                                                <font size="4" color="green">example_21-09-19</font><br>
-                                                <label class="label">Time</label>
-
-                                            <font size="4" color="green">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <font size="4" color="green">example_22:30</font>
-
-                                                <label class="label">Expected Gathering</label>
-                                                <font size="4" color="green">example_500</font> <br>
-                                            <center> 
-                                                <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
-                                                </div>
-                                            </center>
-                                  
-						</div>
-					</form>
-				</div>
-				 
-			</div>
-                                <hr style="background-color: #ffc107;">
-                        <div class="row">
-				<div class="col-lg-2">
-                                    <%--*            <%
-                                      if(rs.getBinaryStream("photo").read()!=-1){
-                                    %>
-                                   <img src="GetPhoto?email=<%=rs.getString("email")%>" width="120" height="150">                            
-                                    <%   
-                                       }else{
-                                    %>   --%> 
-                                   <img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
-                          <%--          <%    
-                                        }
-                                    %>  --%>
-				</div>
-				<div class="col-lg-10">
-				    <form action="" class="form-horizontal">
-					<div class="form-group">
-                                            <label class="label">Name of Department</label>
-                                            <font size="4" color="green">example_CSE</font>
-                                            <label class="label">Name of Event</label>
-                                            <font size="4" color="green">example_Code-Auctor2K18</font>
-                                            <label class="label">Type of Event</label>
-                                            <font size="4" color="green">example_two</font><br>
-                                            <label class="label">Chief Guest of the Event</label>
-                                            <font size="4" color="green">example_OFFICIALMUKUL</font>
-                                                <label class="label">Date</label>
-                                                <font size="4" color="green">example_21-09-19</font><br>
-                                                <label class="label">Time</label>
-
-                                            <font size="4" color="green">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <font size="4" color="green">example_22:30</font>
-
-                                                <label class="label">Expected Gathering</label>
-                                                <font size="4" color="green">example_500</font> <br>
-                                            <center> 
-                                                <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
-                                                </div>
-                                            </center>
-                                  
-						</div>
-					</form>
-				</div>
-				 
-			</div>
                                 <hr style="background-color: #ffc107;">
                                 
             </div>                                    

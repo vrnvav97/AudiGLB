@@ -109,17 +109,45 @@
                         <hr style="background-color: #ffc107;">
 			<div class="row">
 				<div class="col-lg-2">
-                                    <%--*            <%
-                                      if(rs.getBinaryStream("photo").read()!=-1){
+                                    <%
+                                        String audi = rs.getString("audiAssigned");
+                                        
+                                        if(audi.equalsIgnoreCase("SBG")){
                                     %>
-                                   <img src="GetPhoto?email=<%=rs.getString("email")%>" width="120" height="150">                            
-                                    <%   
-                                       }else{
-                                    %>   --%> 
-                                   &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="220" padding-top: 25px;>                           
-                          <%--          <%    
-                                        }
-                                    %>  --%>
+                                   &nbsp;&nbsp;<img src="img/SBG.jpg" width="150" height="200" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("SHD")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/SHD.jpg" width="150" height="200" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("Audi01")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/Audi01.jpg" width="150" height="200" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("Audi02")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/Audi02.jpg" width="150" height="200" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     else if(audi.equalsIgnoreCase("PGDM")){
+                                     
+                                     %>
+                                      &nbsp;&nbsp;<img src="img/PGDMHall.jpg" width="150" height="200" padding-top: 25px;>  
+                                     
+                                      <%
+                                       }
+                                       else{
+                                      %>
+                                     &nbsp;&nbsp;<img src="img/glbajaj-banner.jpg" width="150" height="200" padding-top: 25px;>  
+                                     <%
+                                     }
+                                     %>
 				</div>
 				<div class="col-lg-10">
 				    <form action="" class="form-horizontal">
