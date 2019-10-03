@@ -59,6 +59,7 @@
 			margin: 5px;
 			line-height: 50px;
 		}
+                
 		.box-inner-down
 		{
 			color: #fff;
@@ -72,6 +73,10 @@
 			top: 5%;
 		}
 		.container h3
+		{
+			color: #fff;
+		}
+                .container h4
 		{
 			color: #fff;
 		}
@@ -133,7 +138,7 @@
 				</div>
 			</a>
 
-			<a href="">
+			<a href="adminHistory.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h3 class="text-center">History</h3>
@@ -146,10 +151,11 @@
                         <a href="">
 				<div class="box">
 					<div class="box-inner">
-						<h3 class="text-center">View Pending Request</h3>
+						<h4 class="text-center">View Pending Request</h4>
 					</div>
 					<div class="box-inner-down">
-					<i class="fa fa-history icon" aria-hidden="true" style="font-size: 8em"></i>
+					<i class="fa fa-exclamation-triangle icon " aria-hidden="true" style="font-size: 8em"></i>
+                       
 					</div>
 				</div>
 			</a>
@@ -157,10 +163,11 @@
                     <a href="">
 				<div class="box">
 					<div class="box-inner">
-						<h3 class="text-center">View Cancelled Request</h3>
+						<h4 class="text-center">View Cancelled Request</h4>
 					</div>
 					<div class="box-inner-down">
-					<i class="fa fa-history icon" aria-hidden="true" style="font-size: 8em"></i>
+					<i class="fa fa-times-circle icon" aria-hidden="true" style="font-size: 8em"></i>
+                                     
 					</div>
 				</div>
 			</a>
