@@ -1,0 +1,341 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.sql.ResultSetMetaData;
+import java.sql.ResultSet;
+import java.util.HashMap;
+
+public final class pendingRequest_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+
+    HashMap h=(HashMap)session.getAttribute("AdminDetails");
+    if(h!=null){
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("<head>\n");
+      out.write("\t<title>Pending Request List</title>\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n");
+      out.write("\t<style type=\"text/css\">\n");
+      out.write("\t\tbody\n");
+      out.write("\t\t{\n");
+      out.write("\t\t\tbackground-color: #ffc107;\n");
+      out.write("\t\t}\n");
+      out.write("\t\t.navbar\n");
+      out.write("\t\t{\n");
+      out.write("\t\t\tdisplay: inline;\n");
+      out.write("\t\t\tfloat: right;\n");
+      out.write("\t\t\tmargin:10px;\n");
+      out.write("\t\t}\n");
+      out.write("\t\t.back\n");
+      out.write("\t\t{\n");
+      out.write("\t\t\t/*position: absolute;*/\n");
+      out.write("\t\t\ttop: 20%;\n");
+      out.write("\t\t\tleft: 50%;\n");
+      out.write("\t\t\tbackground-color: #000;\n");
+      out.write("\t\t\topacity: 0.9;\n");
+      out.write("\t\t\twidth: 1200px;\n");
+      out.write("\t\t\theight: 600px;\n");
+      out.write("\t\t\tcolor: #fff;\n");
+      out.write("\t\t\toverflow-y: scroll;\n");
+      out.write("\t\t}\n");
+      out.write("\t\t.label\n");
+      out.write("\t\t{\n");
+      out.write("\t\t\tmargin: 15px;\n");
+      out.write("\t\t\tfont-size: 1.2em;\n");
+      out.write("\t\t}\n");
+      out.write("\t\t.drop-down\n");
+      out.write("\t\t{\n");
+      out.write("\t\t\twidth: 150px;\n");
+      out.write("\n");
+      out.write("\t\t}\n");
+      out.write("                * {\n");
+      out.write("                box-sizing: border-box;\n");
+      out.write("              }\n");
+      out.write("\n");
+      out.write("              .column {\n");
+      out.write("                float: left;\n");
+      out.write("                padding: 10px;\n");
+      out.write("                height: 500px;\n");
+      out.write("              }\n");
+      out.write("\n");
+      out.write("              .left {\n");
+      out.write("                width: 50%;\n");
+      out.write("              }\n");
+      out.write("\n");
+      out.write("              .right {\n");
+      out.write("                width: 50%;\n");
+      out.write("              }\n");
+      out.write("\n");
+      out.write("              .row:after {\n");
+      out.write("                content: \"\";\n");
+      out.write("                display: table;\n");
+      out.write("                clear: both;\n");
+      out.write("              }\n");
+      out.write("\t</style>\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("\t<div class=\"py-3 container-fluid\" style=\"background-color: #592106;margin: 0px;display: inline-block;\">\n");
+      out.write("\t\t<div class=\"text-center\" style=\"width: 70%;float: left;\">\n");
+      out.write("\t\t\t\t<h2 style=\"color: white; font-family: Times New Roman;\">G L Bajaj Institute of Technology and Management</h2>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t\t<div style=\"width: 20%;float: right;color: #fff;\">\n");
+      out.write("\t\t\t\n");
+      out.write("\t\t\t<!-- <a href=\"\" class=\"navbar\">hi</a>\n");
+      out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a>\n");
+      out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a>\n");
+      out.write("\t\t\t<a href=\"\" class=\"navbar\">hi</a> -->\n");
+      out.write("<!--\t\t\t<p class=\"navbar\">hii</p>\n");
+      out.write("\t\t\t<p class=\"navbar\">hii</p>-->\n");
+      out.write("\t\t\t<p class=\"navbar\"><a href=\"Logout.jsp\">Logout</a></p>\n");
+      out.write("\t\t\t<p class=\"navbar\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i></p>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t</div>\n");
+      out.write("\t<div class=\"container\">\n");
+      out.write("\t\t<div class=\"panel panel-default text center\">\n");
+      out.write("\t\t\t<div class=\"panel-heading text-center\">\n");
+      out.write("                            <h3>All Bookings</h3>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t</div>\n");
+      out.write("\t</br>\n");
+      out.write("\t</br>\n");
+      out.write("        <div class=\"container\">\n");
+      out.write("            <div class=\"back\">        \n");
+      out.write("\t\t\t<section>\n");
+      out.write("                           ");
+      out.write("\n");
+      out.write("                        <hr style=\"background-color: #ffc107;\">\n");
+      out.write("\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t<div class=\"col-lg-2\">\n");
+      out.write("                                    ");
+      out.write(" \n");
+      out.write("                                   &nbsp;&nbsp;<img src=\"img/glbajaj-banner.jpg\" width=\"150\" height=\"220\" padding-top: 25px;>                           \n");
+      out.write("                          ");
+      out.write("\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t<div class=\"col-lg-10\">\n");
+      out.write("\t\t\t\t    <form action=\"\" class=\"form-horizontal\">\n");
+      out.write("\t\t\t\t\t<div class=\"form-group\">\n");
+      out.write("                                            <label class=\"label\">Name of Department</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_CSE</font>\n");
+      out.write("                                            <label class=\"label\">Name of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_Code-Auctor2K18</font>\n");
+      out.write("                                            <label class=\"label\">Type of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_two</font><br>\n");
+      out.write("                                            <label class=\"label\">Chief Guest of the Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_OFFICIALMUKUL</font>\n");
+      out.write("                                                <label class=\"label\">Date</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_21-09-19</font><br>\n");
+      out.write("                                                <label class=\"label\">Time</label>\n");
+      out.write("\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_22:30</font>\n");
+      out.write("\n");
+      out.write("                                                <label class=\"label\">Expected Gathering</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_500</font> <br>\n");
+      out.write("                                            <center> \n");
+      out.write("                                                <div  text-align=\"center\" class=\"form-group\">\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\n");
+      out.write("                                                </div>\n");
+      out.write("                                            </center>\n");
+      out.write("                                  \n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</form>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t \n");
+      out.write("\t\t\t</div>\n");
+      out.write("                                <hr style=\"background-color: #ffc107;\">\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("\t\t\t\t<div class=\"col-lg-2\">\n");
+      out.write("                                    ");
+      out.write(" \n");
+      out.write("                                   &nbsp;&nbsp;<img src=\"img/glbajaj-banner.jpg\" width=\"150\" height=\"220\" padding-top: 25px;>                           \n");
+      out.write("                          ");
+      out.write("\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t<div class=\"col-lg-10\">\n");
+      out.write("\t\t\t\t    <form action=\"\" class=\"form-horizontal\">\n");
+      out.write("\t\t\t\t\t<div class=\"form-group\">\n");
+      out.write("                                            <label class=\"label\">Name of Department</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_CSE</font>\n");
+      out.write("                                            <label class=\"label\">Name of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_Code-Auctor2K18</font>\n");
+      out.write("                                            <label class=\"label\">Type of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_two</font><br>\n");
+      out.write("                                            <label class=\"label\">Chief Guest of the Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_OFFICIALMUKUL</font>\n");
+      out.write("                                                <label class=\"label\">Date</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_21-09-19</font><br>\n");
+      out.write("                                                <label class=\"label\">Time</label>\n");
+      out.write("\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_22:30</font>\n");
+      out.write("\n");
+      out.write("                                                <label class=\"label\">Expected Gathering</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_500</font> <br>\n");
+      out.write("                                            <center> \n");
+      out.write("                                                <div  text-align=\"center\" class=\"form-group\">\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\n");
+      out.write("                                                </div>\n");
+      out.write("                                            </center>\n");
+      out.write("                                  \n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</form>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t \n");
+      out.write("\t\t\t</div>\n");
+      out.write("                                <hr style=\"background-color: #ffc107;\">\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("\t\t\t\t<div class=\"col-lg-2\">\n");
+      out.write("                                    ");
+      out.write(" \n");
+      out.write("                                  &nbsp;&nbsp; <img src=\"img/glbajaj-banner.jpg\" width=\"150\" height=\"220\" padding-top: 25px;>                           \n");
+      out.write("                          ");
+      out.write("\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t<div class=\"col-lg-10\">\n");
+      out.write("\t\t\t\t    <form action=\"\" class=\"form-horizontal\">\n");
+      out.write("\t\t\t\t\t<div class=\"form-group\">\n");
+      out.write("                                            <label class=\"label\">Name of Department</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_CSE</font>\n");
+      out.write("                                            <label class=\"label\">Name of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_Code-Auctor2K18</font>\n");
+      out.write("                                            <label class=\"label\">Type of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_two</font><br>\n");
+      out.write("                                            <label class=\"label\">Chief Guest of the Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_OFFICIALMUKUL</font>\n");
+      out.write("                                                <label class=\"label\">Date</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_21-09-19</font><br>\n");
+      out.write("                                                <label class=\"label\">Time</label>\n");
+      out.write("\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_22:30</font>\n");
+      out.write("\n");
+      out.write("                                                <label class=\"label\">Expected Gathering</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_500</font> <br>\n");
+      out.write("                                            <center> \n");
+      out.write("                                                <div  text-align=\"center\" class=\"form-group\">\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\n");
+      out.write("                                                </div>\n");
+      out.write("                                            </center>\n");
+      out.write("                                  \n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</form>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t \n");
+      out.write("\t\t\t</div>\n");
+      out.write("                                <hr style=\"background-color: #ffc107;\">\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("\t\t\t\t<div class=\"col-lg-2\">\n");
+      out.write("                                    ");
+      out.write(" \n");
+      out.write("                                   <img src=\"img/glbajaj-banner.jpg\" width=\"150\" height=\"220\" padding-top: 25px;>                           \n");
+      out.write("                          ");
+      out.write("\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t<div class=\"col-lg-10\">\n");
+      out.write("\t\t\t\t    <form action=\"\" class=\"form-horizontal\">\n");
+      out.write("\t\t\t\t\t<div class=\"form-group\">\n");
+      out.write("                                            <label class=\"label\">Name of Department</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_CSE</font>\n");
+      out.write("                                            <label class=\"label\">Name of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_Code-Auctor2K18</font>\n");
+      out.write("                                            <label class=\"label\">Type of Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_two</font><br>\n");
+      out.write("                                            <label class=\"label\">Chief Guest of the Event</label>\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_OFFICIALMUKUL</font>\n");
+      out.write("                                                <label class=\"label\">Date</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_21-09-19</font><br>\n");
+      out.write("                                                <label class=\"label\">Time</label>\n");
+      out.write("\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_10:00</font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                            <font size=\"4\" color=\"green\">example_22:30</font>\n");
+      out.write("\n");
+      out.write("                                                <label class=\"label\">Expected Gathering</label>\n");
+      out.write("                                                <font size=\"4\" color=\"green\">example_500</font> <br>\n");
+      out.write("                                            <center> \n");
+      out.write("                                                <div  text-align=\"center\" class=\"form-group\">\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-danger\" name=\"submit\" value=\"Cancel\">&nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                                    <input type=\"button\" class=\"btn-success\"name=\"submit\" value=\"Allow Audi\">\n");
+      out.write("                                                </div>\n");
+      out.write("                                            </center>\n");
+      out.write("                                  \n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</form>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t \n");
+      out.write("\t\t\t</div>\n");
+      out.write("                                <hr style=\"background-color: #ffc107;\">\n");
+      out.write("                                \n");
+      out.write("            </div>                                    \n");
+      out.write("        </div>\n");
+      out.write("\t<script type=\"text/javascript\" src=\"js/font-awesome.js\"></script>\n");
+      out.write("</body>\n");
+      out.write("</html>\n");
+      out.write("\n");
+
+    }else{
+        session.setAttribute("msg","Please Login First");
+        response.sendRedirect("login.jsp");
+    }
+
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

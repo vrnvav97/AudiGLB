@@ -149,7 +149,7 @@
 					</div>
 				</div>
 			</a>
-                        <a href="">
+                        <a href="pendingRequest.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h4 class="text-center">View Pending Request</h4>
@@ -161,7 +161,7 @@
 				</div>
 			</a>
                     
-                    <a href="">
+                    <a href="cancelledRequest.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h4 class="text-center">View Cancelled Request</h4>
