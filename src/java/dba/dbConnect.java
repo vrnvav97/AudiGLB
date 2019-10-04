@@ -15,7 +15,7 @@ public class dbConnect {
 
 private Statement st,adminAllHis,viewPending,cancelledRequest;
 
-  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser;
+  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser,allowAudi,cancelAudi;
   
     public dbConnect(){
       try{
@@ -28,7 +28,9 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
         
           insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
-         
+          allowAudi = c.prepareStatement("UPDATE audiDetails set audiAssigned=?,request=? where bookingID=?");
+          cancelAudi = c.prepareStatement("UPDATE audiDetails set request=? where bookingID=?");
+          
       }catch(Exception ex){
           ex.printStackTrace();
       }
@@ -152,17 +154,31 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
       return rs;
   }
   
-//  public void callCancel (String audiName)
-//  {
-//      try
-//      {
-//           callCancel = c.prepareStatement("UPDATE audiDetails SET request= 2 WHERE eventName = ?");
-//           int i = callCancel.executeUpdate();
-//           
-//      }
-//      catch (Exception e)
-//      {
-//          System.out.println(e);
-//      }
-//  }
+  public String allowAudi(int bid,String audiName) throws SQLException{
+      
+      allowAudi.setString(1, audiName);
+      allowAudi.setInt(2, 1);
+      allowAudi.setInt(3, bid);
+      int x = allowAudi.executeUpdate();
+      if (x == 1) {
+            return "Audi Allocated Successfully";
+        } else {
+            return "Try Again!";
+        }
+  }
+  
+  public String cancelAudi(int bid) throws SQLException{
+      
+     
+      cancelAudi.setInt(1, 2);
+      cancelAudi.setInt(2, bid);
+      int x = cancelAudi.executeUpdate();
+      if (x == 1) {
+            return "Cancelled Audi Request";
+        } else {
+            return "Try Again!";
+        }
+  }
+  
+
 }

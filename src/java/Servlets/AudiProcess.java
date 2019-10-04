@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
- @MultipartConfig
+
 public class AudiProcess extends HttpServlet {
 
     protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException
@@ -87,7 +87,7 @@ public class AudiProcess extends HttpServlet {
                }
             }
            }catch(Exception e){
-               session.setAttribute("msg","error!!!");
+               session.setAttribute("msg","Try Again Error Occurred!");
                response.sendRedirect("login.jsp");
         }
     }

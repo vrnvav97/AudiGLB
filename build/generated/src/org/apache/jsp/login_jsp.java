@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.HashMap;
 
 public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -43,6 +44,22 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\r\n");
       out.write("\r\n");
+
+    HashMap uh=(HashMap)session.getAttribute("UserDetails");
+    HashMap ah=(HashMap)session.getAttribute("AdminDetails");
+    if(uh!=null){
+        response.sendRedirect("userDashboard.jsp");
+    }
+    else if(ah!=null){
+        
+        response.sendRedirect("adminDashboard.jsp");
+    }
+    else{
+
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
@@ -75,12 +92,10 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\tbackground-color: #000;\r\n");
       out.write("\t\t\topacity: 0.5;\r\n");
       out.write("\t\t\twidth: 440px;\r\n");
-      out.write("\t\t\theight: 320px;\r\n");
+      out.write("\t\t\theight: 360px;\r\n");
       out.write("\t\t\tcolor: #fff;\r\n");
       out.write("\t\t}\r\n");
-      out.write("                input[type=\"submit\"]:hover {\r\n");
-      out.write("                box-shadow: 0px 3px 5px 1px #6eff00;\r\n");
-      out.write("}\r\n");
+      out.write("\r\n");
       out.write("\t</style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
@@ -120,21 +135,21 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                                    <p><span>Username</span> <input type=\"text\" name=\"username\"><br><br>\r\n");
       out.write("\t\t\t\t\t<span>Password</span> <input type=\"password\" name=\"password\"></p>\r\n");
-      out.write("                                    <a href=\"\" style=\"color:#6eff00\">Forgot Password</a><br><br>\r\n");
-      out.write("\t\t\t\t\t<input type=\"submit\" name=\"\" value=\"GO\"style=\"border-radius: 30px; width: 200px; \">\r\n");
+      out.write("                                    <a class=\"forgotPass\" href=\"forgotPassword.jsp\">Forgot Password</a><br><br>\r\n");
+      out.write("                                    <input class=\"submitButton\" type=\"submit\" name=\"\" value=\"GO\" style=\"border-radius: 30px; width: 200px; \">\r\n");
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\t\r\n");
       out.write("\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rGF8kKXvvmYtT4zNGqicXRjvuAnmmbvPZX.109773641.100148163.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163vH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\r\n");
       out.write("\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSXgi164MCGG3u5RKXaBGVBabmxQTVRAAVECCPSEWY5UMdx9nDz0W1\" crossorigin=\"anonymous\"></script>\r\n");
       out.write("\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\r\n");
-      out.write("        <script>\r\n");
-      out.write("            var a = [#6eff00,#fff700,#00ffad];\r\n");
-      out.write("            var b = Math.random()*2+0;\r\n");
-      out.write("            console.log(b);\r\n");
-      out.write("        </script>\r\n");
+      out.write("        <script type=\"text/javascript\" src=\"js/loginjs.js\"></script>\r\n");
       out.write("</body>\r\n");
-      out.write("</html>");
+      out.write("</html>\r\n");
+      out.write("\r\n");
+
+    }
+
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

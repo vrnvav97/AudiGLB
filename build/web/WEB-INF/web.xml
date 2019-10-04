@@ -4,6 +4,14 @@
         <servlet-name>History</servlet-name>
         <servlet-class>Servlets.History</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AllowAudi</servlet-name>
+        <servlet-class>Servlets.AllowAudi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CancelAudi</servlet-name>
+        <servlet-class>Servlets.CancelAudi</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AudiProcess</servlet-name>
         <url-pattern>/bookAudiProcess</url-pattern>
@@ -11,6 +19,14 @@
     <servlet-mapping>
         <servlet-name>History</servlet-name>
         <url-pattern>/ViewHistory</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AllowAudi</servlet-name>
+        <url-pattern>/AllowAudi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancelAudi</servlet-name>
+        <url-pattern>/CancelAudi</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
