@@ -178,17 +178,7 @@
                                               
 
 	<script type="text/javascript" src="js/font-awesome.js"></script>
-        <script>
-          var a = document.querySelector(".cancel");
-          a.addEventListener('click',()=>{
-              var result = confirm('Do you really want to Cancel Booking');
-              if (result===true)
-              {
-                  document.write("Your booking request has been cancelled !");
-//                  window.navigate(http://localhost:27016/AudiGLB/userDashboard.jsp);
-              }
-          });
-        </script>
+        <script type="text/javascript" src="js/confirmFormjs.js"></script>
 </body>
 </html>
 <%
