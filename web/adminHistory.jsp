@@ -47,6 +47,10 @@
 			margin: 70px;
 			float: left;
 		}
+                .box:hover
+                {
+                    box-shadow: 0px 0px 5px 10px #fff;
+                }
 		.box-inner
 		{
 			width: 220px;

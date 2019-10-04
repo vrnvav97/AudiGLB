@@ -47,6 +47,10 @@
 			margin: 70px;
 			float: left;
 		}
+                .box:hover
+                {
+                    box-shadow: 0px 0px 5px 10px #fff;
+                }
 		.box-inner
 		{
 			width: 220px;
@@ -96,7 +100,7 @@
 <!--                        <p class="navbar"></p>-->
 			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
 			<p class="navbar"><%=(String)h.get("name")%></p>
-			<p class="navbar"><i class="fa fa-bell" aria-hidden="true" ><span class="badge">1</span></i></p>
+<!--			<p class="navbar"><i class="fa fa-bell" aria-hidden="true" ><span class="badge">1</span></i></p>-->
 		</div>
 	</div>
 		<div class="container">
