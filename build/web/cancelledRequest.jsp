@@ -131,6 +131,9 @@
 
                                                 <label class="label">Expected Gathering</label>
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
+                                                <label class="label">Request by</label>
+                                                <font size="4" color="green"><%= rs.getString("username")%></font> <br>
+                                            
                                             <center> 
                                                 <div  text-align="center" class="form-group">
                                                     <input type="button" class="btn-success"name="submit" value="Allow Audi">
