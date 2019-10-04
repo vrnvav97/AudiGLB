@@ -26,7 +26,7 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
           checkAdLogin=c.prepareStatement("select * from loginDetails where username=? and password=?");
           getUser=c.prepareStatement("select * from loginDetails where username=?");
         
-          insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
+          insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`,'audiAssigned') VALUES (?,?,?,?,?,?,?,?,?,?)");
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
           allowAudi = c.prepareStatement("UPDATE audiDetails set audiAssigned=?,request=? where bookingID=?");
           cancelAudi = c.prepareStatement("UPDATE audiDetails set request=? where bookingID=?");
@@ -62,6 +62,7 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
           insertBooking.setString(7,time2);
           insertBooking.setInt(8,eventGathering);
           insertBooking.setString(9,username);
+          insertBooking.setString(10,"NotApprovedByAdmin");
           int x=insertBooking.executeUpdate();
           if(x!=0){
              return "Success";
