@@ -117,7 +117,7 @@
                                        }else{
                                     %>   --%> 
                                     <%
-                                        String audi = rs.getString("audiAssigned");
+                                        String audi = (String)rs.getString("audiAssigned");
                                         
                                         if(audi.equalsIgnoreCase("SBG")){
                                     %>
