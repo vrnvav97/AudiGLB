@@ -148,11 +148,12 @@
 					</form>
                                                     <div id="<%=i%>_div" class="audiSelectionDiv">
                                                         <form >
-                                                    <input type="radio" name="audiSelection" value="Audi 1" selected="true">Audi 1
-                                                    <input type="radio" name="audiSelection" value="Audi 2">Audi 2
-                                                    <input type="radio" name="audiSelection" value="SHD">SHD
-                                                    <input type="radio" name="audiSelection" value="SBG">SBG
-                                                     <input type="submit"  class="btn-success" name="Go" value="Go">
+                                                    <input type="radio" name="audiSelection" value="Audi01" selected="true">Audi01
+                                                    &nbsp; &nbsp; <input type="radio" name="audiSelection" value="Audi02">Audi02
+                                                    &nbsp; &nbsp;<input type="radio" name="audiSelection" value="SHD">SHD
+                                                    &nbsp; &nbsp;<input type="radio" name="audiSelection" value="SBG">SBG
+                                                    &nbsp; &nbsp;<input type="radio" name="audiSelection" value="PGDMHall">PGDM Hall
+                                                    &nbsp; &nbsp; <input type="submit"  class="btn-success" name="Go" value="Go">
                                                         </form>
                                                 </div>    
                                             
