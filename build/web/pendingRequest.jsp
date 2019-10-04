@@ -68,6 +68,10 @@
                 display: table;
                 clear: both;
               }
+              .audiSelectionDiv
+              {
+                  display: none;
+              }
 	</style>
 </head>
 <body>
@@ -101,7 +105,7 @@
                        <%
                                dba.dbConnect db = new dba.dbConnect();
                                ResultSet rs = db.pendingRequest();
-               
+                               int i = 1;
 			     while(rs.next()){
                         %>    
                         <hr style="background-color: #ffc107;">
@@ -114,10 +118,12 @@
 				<div class="col-lg-10">
 				    <form action="" class="form-horizontal">
 					<div class="form-group">
+                                            <label class="label">S No</label>
+                                            <font size="4" color="green"><%=i%></font>
                                             <label class="label">Name of Department</label>
                                             <font size="4" color="green"><%= rs.getString("nameOfDepartment")%></font>
                                             <label class="label">Name of Event</label>
-                                            <font size="4" color="green"><%= rs.getString("eventName")%></font>
+                                            <font size="4" color="green" value="<%= rs.getString("e4ventName")%> " id="<%=i%>_eventName"><%= rs.getString("eventName")%></font>
                                             <label class="label">Type of Event</label>
                                             <font size="4" color="green"><%= rs.getString("typeOfEvent")%></font><br>
                                             <label class="label">Chief Guest of the Event</label>
@@ -133,17 +139,25 @@
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
+                                                    <input type="button" class="btn-danger" name="submit" value="Cancel" onclick=sum(this);>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="button" id="<%=i%>" class="btn-success"name="submit" value="Allow Audi" onclick=fun(this);>
                                                 </div>
                                             </center>
                                   
 						</div>
 					</form>
+                                                    <div id="<%=i%>_div" class="audiSelectionDiv">
+                                                    <input type="radio" name="audiSelection" value="Audi 1">Audi 1
+                                                    <input type="radio" name="audiSelection" value="Audi 2">Audi 2
+                                                    <input type="radio" name="audiSelection" value="SHD">SHD
+                                                    <input type="radio" name="audiSelection" value="SBG">SBG
+                                                </div>    
+                                            
 				</div>
 				 
 			</div>
                         <%
+                            i++;
                                     }
                                     %>
                                 <hr style="background-color: #ffc107;">
@@ -151,6 +165,29 @@
             </div>                                    
         </div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
+        <script>
+            function fun(e)
+            {
+               var element = document.getElementById(e.getAttribute('id'));
+               element.style.display='none';
+            var a = document.getElementById(e.getAttribute('id')+'_div');
+            a.style.display = 'inline';
+             }
+             
+             function sum(ee)
+             {
+                 var result = confirm('Do you really want to cancel request');
+                 if (result === true)
+                 {
+                     console.log('i m called');
+                    var name =  document.getElementById(ee.getAttribute('id')+'_eventName');
+                    console.log( name.getAttribute('value'));
+                    <%
+                         db.callCancel("${valueAttribute}");
+                         %>
+                 }
+             }
+            </script>
 </body>
 </html>
 
