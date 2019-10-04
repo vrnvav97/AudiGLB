@@ -87,6 +87,7 @@ public class AudiProcess extends HttpServlet {
                }
             }
            }catch(Exception e){
+               
                session.setAttribute("msg","Try Again Error Occurred!");
                response.sendRedirect("login.jsp");
         }
