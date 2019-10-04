@@ -88,7 +88,7 @@
                 <!--			<p class="navbar">hii</p>-->
                 <p class="navbar"><a href="Logout.jsp">Logout</a></p>
                 <p class="navbar"><%=(String)h.get("name")%></p>
-                <p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>
+                <p class="navbar"><a href="adminDashboard.jsp" ><i class="fa fa-home" aria-hidden="true" style="font-size: x-large"></i></a></p>
             </div>
         </div>
         <div class="container">
