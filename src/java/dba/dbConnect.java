@@ -15,7 +15,7 @@ public class dbConnect {
 
 private Statement st,adminAllHis,viewPending,cancelledRequest;
 
-  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser,callCancel;
+  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser;
   
     public dbConnect(){
       try{
@@ -152,17 +152,17 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
       return rs;
   }
   
-  public void callCancel (String audiName)
-  {
-      try
-      {
-           callCancel = c.prepareStatement("UPDATE audiDetails SET request= 2 WHERE eventName = ?");
-           int i = callCancel.executeUpdate();
-           
-      }
-      catch (Exception e)
-      {
-          System.out.println(e);
-      }
-  }
+//  public void callCancel (String audiName)
+//  {
+//      try
+//      {
+//           callCancel = c.prepareStatement("UPDATE audiDetails SET request= 2 WHERE eventName = ?");
+//           int i = callCancel.executeUpdate();
+//           
+//      }
+//      catch (Exception e)
+//      {
+//          System.out.println(e);
+//      }
+//  }
 }

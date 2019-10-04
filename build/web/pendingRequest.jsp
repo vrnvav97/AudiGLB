@@ -123,7 +123,7 @@
                                             <label class="label">Name of Department</label>
                                             <font size="4" color="green"><%= rs.getString("nameOfDepartment")%></font>
                                             <label class="label">Name of Event</label>
-                                            <font size="4" color="green" value="<%= rs.getString("e4ventName")%> " id="<%=i%>_eventName"><%= rs.getString("eventName")%></font>
+                                            <font size="4" color="green" value="<%= rs.getString("eventName")%> " id="<%=i%>_eventName"><%= rs.getString("eventName")%></font>
                                             <label class="label">Type of Event</label>
                                             <font size="4" color="green"><%= rs.getString("typeOfEvent")%></font><br>
                                             <label class="label">Chief Guest of the Event</label>
@@ -172,21 +172,22 @@
                element.style.display='none';
             var a = document.getElementById(e.getAttribute('id')+'_div');
             a.style.display = 'inline';
+
              }
              
-             function sum(ee)
-             {
-                 var result = confirm('Do you really want to cancel request');
-                 if (result === true)
-                 {
-                     console.log('i m called');
-                    var name =  document.getElementById(ee.getAttribute('id')+'_eventName');
-                    console.log( name.getAttribute('value'));
-                    <%
+//             function sum(ee)
+//             {
+//                 var result = confirm('Do you really want to cancel request');
+//                 if (result === true)
+//                 {
+//                     console.log('i m called');
+//                    var name =  document.getElementById(ee.getAttribute('id')+'_eventName');
+//                    console.log( name.getAttribute('value'));
+                    <%--
                          db.callCancel("${valueAttribute}");
-                         %>
-                 }
-             }
+                        --%>
+                // }
+            // }
             </script>
 </body>
 </html>
