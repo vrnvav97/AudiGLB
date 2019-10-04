@@ -200,6 +200,8 @@
             </div>                                    
         </div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
+        <script>
+            
 </body>
 </html>
 <%
