@@ -28,7 +28,7 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
         
           insertBooking=c.prepareStatement("INSERT INTO `audiDetails` (`nameOfDepartment`, `eventName`, `typeOfEvent`, `eventChiefGuest`, `eventDate`, `time1`, `time2`, `eventGathering`, `username`) VALUES (?,?,?,?,?,?,?,?,?)");
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
-          
+         
       }catch(Exception ex){
           ex.printStackTrace();
       }
@@ -151,4 +151,18 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
       }
       return rs;
   }
+  
+//  public void callCancel (String audiName)
+//  {
+//      try
+//      {
+//           callCancel = c.prepareStatement("UPDATE audiDetails SET request= 2 WHERE eventName = ?");
+//           int i = callCancel.executeUpdate();
+//           
+//      }
+//      catch (Exception e)
+//      {
+//          System.out.println(e);
+//      }
+//  }
 }

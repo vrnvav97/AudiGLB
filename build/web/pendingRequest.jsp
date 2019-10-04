@@ -68,6 +68,10 @@
                 display: table;
                 clear: both;
               }
+              .audiSelectionDiv
+              {
+                  display: none;
+              }
 	</style>
 </head>
 <body>
@@ -75,15 +79,15 @@
 		<div class="text-center" style="width: 70%;float: left;">
 				<h2 style="color: white; font-family: Times New Roman;">G L Bajaj Institute of Technology and Management</h2>
 		</div>
-		<div style="width: 20%;float: right;color: #fff;">
+		<div style="width: 30%;float: right;color: #fff;">
 			
 			<!-- <a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
-<!--			<p class="navbar">hii</p>
-			<p class="navbar">hii</p>-->
-			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
+<!--			<p class="navbar">hii</p>-->
+                        <p class="navbar"><a href="Logout.jsp">Logout</a></p>
+			<p class="navbar"><%=(String)h.get("name")%></p>
 			<p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>
 		</div>
 	</div>
@@ -101,7 +105,7 @@
                        <%
                                dba.dbConnect db = new dba.dbConnect();
                                ResultSet rs = db.pendingRequest();
-               
+                               int i = 1;
 			     while(rs.next()){
                         %>    
                         <hr style="background-color: #ffc107;">
@@ -114,10 +118,12 @@
 				<div class="col-lg-10">
 				    <form action="" class="form-horizontal">
 					<div class="form-group">
+                                            <label class="label">S No</label>
+                                            <font size="4" color="green"><%=i%></font>
                                             <label class="label">Name of Department</label>
                                             <font size="4" color="green"><%= rs.getString("nameOfDepartment")%></font>
                                             <label class="label">Name of Event</label>
-                                            <font size="4" color="green"><%= rs.getString("eventName")%></font>
+                                            <font size="4" color="green" value="<%= rs.getString("eventName")%> " id="<%=i%>_eventName"><%= rs.getString("eventName")%></font>
                                             <label class="label">Type of Event</label>
                                             <font size="4" color="green"><%= rs.getString("typeOfEvent")%></font><br>
                                             <label class="label">Chief Guest of the Event</label>
@@ -133,17 +139,28 @@
                                                 <font size="4" color="green"><%= rs.getString("eventGathering")%></font> <br>
                                             <center> 
                                                 <div  text-align="center" class="form-group">
-                                                    <input type="button" class="btn-danger" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <input type="button" class="btn-success"name="submit" value="Allow Audi">
+                                                    <input type="button" class="btn-danger" name="submit" value="Cancel" onclick=sum(this);>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="button" id="<%=i%>" class="btn-success"name="submit" value="Allow Audi" onclick=fun(this);>
                                                 </div>
                                             </center>
                                   
 						</div>
 					</form>
+                                                    <div id="<%=i%>_div" class="audiSelectionDiv">
+                                                        <form >
+                                                    <input type="radio" name="audiSelection" value="Audi 1" selected="true">Audi 1
+                                                    <input type="radio" name="audiSelection" value="Audi 2">Audi 2
+                                                    <input type="radio" name="audiSelection" value="SHD">SHD
+                                                    <input type="radio" name="audiSelection" value="SBG">SBG
+                                                     <input type="submit"  class="btn-success" name="Go" value="Go">
+                                                        </form>
+                                                </div>    
+                                            
 				</div>
 				 
 			</div>
                         <%
+                            i++;
                                     }
                                     %>
                                 <hr style="background-color: #ffc107;">
@@ -151,6 +168,7 @@
             </div>                                    
         </div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
+        <script type="text/javascript" src="js/pendingRequestjs.js"></script>
 </body>
 </html>
 
