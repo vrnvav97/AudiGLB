@@ -31,7 +31,7 @@
 			background-color: #000;
 			opacity: 0.9;
 			width: 1200px;
-			height: 350px;
+			height: 450px;
 			color: #fff;
 			overflow-y: scroll;
 		}
@@ -67,6 +67,10 @@
                 content: "";
                 display: table;
                 clear: both;
+              }
+              .cancelButton
+              {
+                  display: none;
               }
 	</style>
 </head>
@@ -174,6 +178,7 @@
                                             <font size="4" color="green"><%= rs.getString("eventChiefGuest")%></font>
                                                 <label class="label">Date</label>
                                                 <font size="4" color="green"><%= rs.getString("eventDate")%></font><br>
+                                                <input type="hidden" value="<%= rs.getString("eventDate")%>" class="getDate">
                                                 <label class="label">Time</label>
 
                                             <font size="4" color="green"><%= rs.getString("time1")%></font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
@@ -188,6 +193,9 @@
                                   
 						</div>
 					</form>
+                                                <div class="cancelButton">
+                                                    <input type="submit" class="btn-danger " name="submit" value="Cancel" >
+                                                </div>
 				</div>
 				 
 			</div>
@@ -200,8 +208,7 @@
             </div>                                    
         </div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
-        <script>
-            
+        <script type="text/javascript" src="js/historyjs.js"></script>
 </body>
 </html>
 <%
