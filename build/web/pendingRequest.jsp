@@ -79,15 +79,15 @@
 		<div class="text-center" style="width: 70%;float: left;">
 				<h2 style="color: white; font-family: Times New Roman;">G L Bajaj Institute of Technology and Management</h2>
 		</div>
-		<div style="width: 20%;float: right;color: #fff;">
+		<div style="width: 30%;float: right;color: #fff;">
 			
 			<!-- <a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
-<!--			<p class="navbar">hii</p>
-			<p class="navbar">hii</p>-->
-			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
+<!--			<p class="navbar">hii</p>-->
+                        <p class="navbar"><a href="Logout.jsp">Logout</a></p>
+			<p class="navbar"><%=(String)h.get("name")%></p>
 			<p class="navbar"><i class="fa fa-home" aria-hidden="true"></i></p>
 		</div>
 	</div>
@@ -147,10 +147,13 @@
 						</div>
 					</form>
                                                     <div id="<%=i%>_div" class="audiSelectionDiv">
-                                                    <input type="radio" name="audiSelection" value="Audi 1">Audi 1
+                                                        <form >
+                                                    <input type="radio" name="audiSelection" value="Audi 1" selected="true">Audi 1
                                                     <input type="radio" name="audiSelection" value="Audi 2">Audi 2
                                                     <input type="radio" name="audiSelection" value="SHD">SHD
                                                     <input type="radio" name="audiSelection" value="SBG">SBG
+                                                     <input type="submit"  class="btn-success" name="Go" value="Go">
+                                                        </form>
                                                 </div>    
                                             
 				</div>
@@ -175,19 +178,10 @@
 
              }
              
-//             function sum(ee)
-//             {
-//                 var result = confirm('Do you really want to cancel request');
-//                 if (result === true)
-//                 {
-//                     console.log('i m called');
-//                    var name =  document.getElementById(ee.getAttribute('id')+'_eventName');
-//                    console.log( name.getAttribute('value'));
-                    <%--
-                         db.callCancel("${valueAttribute}");
-                        --%>
-                // }
-            // }
+             function sum (ee)
+             {
+                 var result = confirm ('Do you really want to cancel request ?');
+             }
             </script>
 </body>
 </html>
