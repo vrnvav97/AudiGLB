@@ -128,16 +128,7 @@
 				</div>
 			</a>
 
-			<a href="">
-				<div class="box">
-					<div class="box-inner">
-						<h3 class="text-center">Active Booking</h3>
-					</div>
-					<div class="box-inner-down">
-						<i class="fa fa-bookmark icon" aria-hidden="true" style="font-size: 8em"></i>
-					</div>
-				</div>
-			</a>
+			
 
 			<a href="history.jsp">
 				<div class="box">
