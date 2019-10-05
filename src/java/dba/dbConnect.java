@@ -15,7 +15,8 @@ public class dbConnect {
 
 private Statement st,adminAllHis,viewPending,cancelledRequest;
 
-  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser,allowAudi,cancelAudi;
+  private PreparedStatement checkAdLogin,insertBooking,viewHistory,getUser,allowAudi,
+          cancelAudi,historyCancelUser,historyCancelAdmin;
   
     public dbConnect(){
       try{
@@ -30,6 +31,8 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
           viewHistory = c.prepareStatement("Select * from audiDetails where username = ?");
           allowAudi = c.prepareStatement("UPDATE audiDetails set audiAssigned=?,request=? where bookingID=?");
           cancelAudi = c.prepareStatement("UPDATE audiDetails set request=? where bookingID=?");
+          historyCancelUser =c.prepareStatement("delete from audiDetails where bookingID=?");
+          historyCancelAdmin = c.prepareStatement("UPDATE audiDetails set audiAssigned=?,request=? where bookingID=?");
           
       }catch(Exception ex){
           ex.printStackTrace();
@@ -178,6 +181,32 @@ private Statement st,adminAllHis,viewPending,cancelledRequest;
       int x = cancelAudi.executeUpdate();
       if (x == 1) {
             return "Cancelled Audi Request";
+        } else {
+            return "Try Again!";
+        }
+  }
+  
+  public String historyCancelUser(int bid) throws SQLException{
+      
+     
+      historyCancelUser.setInt(1, bid);
+      int x = historyCancelUser.executeUpdate();
+      if (x == 1) {
+            return "You have Cancelled your Audi Request Succesfully!";
+        } else {
+            return "Try Again!";
+        }
+  }
+  
+  public String historyCancelAdmin(int bid) throws SQLException{
+      
+     
+      historyCancelAdmin.setString(1,"NotApprovedByAdmin");
+      historyCancelAdmin.setInt(2,1);
+      historyCancelAdmin.setInt(3, bid);
+      int x = historyCancelAdmin.executeUpdate();
+      if (x == 1) {
+            return "You have Cancelled Allocated Audi, Open Pending request section to allocate Audi again!";
         } else {
             return "Try Again!";
         }
