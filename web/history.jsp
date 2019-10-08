@@ -106,7 +106,7 @@
 			
                            <%
                                dba.dbConnect db = new dba.dbConnect();
-                               ResultSet rs = db.history((String)h.get("name"));
+                               ResultSet rs = db.history((String)h.get("username"));
                                int i = 1;
 			     while(rs.next()){
 			   %>
@@ -194,7 +194,9 @@
 						</div>
 					</form>
                                                 <div class="cancelButton">
+                                                    <form>
                                                     <input type="submit" class="btn-danger " name="submit" value="Cancel" >
+                                                    </form>
                                                 </div>
 				</div>
 				 
