@@ -68,6 +68,10 @@
                 display: table;
                 clear: both;
               }
+              .cancelButton
+              {
+                  display:none;
+              }
 	</style>
 </head>
 <body>
@@ -137,6 +141,7 @@
                                             <font size="4" color="green"><%= rs.getString("eventChiefGuest")%></font>
                                                 <label class="label">Date</label>
                                                 <font size="4" color="green"><%= rs.getString("eventDate")%></font><br>
+                                               <input type="hidden" value="<%= rs.getString("eventDate")%>" class="getDate">
                                                 <label class="label">Time</label>
 
                                             <font size="4" color="green"><%= rs.getString("time1")%></font> &nbsp;&nbsp;&nbsp;&nbsp; To &nbsp;&nbsp;&nbsp;&nbsp;
@@ -151,6 +156,9 @@
                                   
 						</div>
 					</form>
+                                                 <div class="cancelButton">
+                                                    <input type="submit" class="btn-danger " name="submit" value="Cancel" >
+                                                </div>
 				</div>
 				 
 			</div>
@@ -163,6 +171,7 @@
             </div>                                    
         </div>
 	<script type="text/javascript" src="js/font-awesome.js"></script>
+          <script type="text/javascript" src="js/historyjs.js"></script>
 </body>
 </html>
 <%
