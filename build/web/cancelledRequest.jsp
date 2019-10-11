@@ -161,7 +161,7 @@
                                 <center> 
                                     <div  text-align="center" class="form-group">
                                         <input type="hidden" name="bookingId" value="<%=id%>">
-                                        <input type="button" id="<%=i%>" class="btn-success"name="submit" value="Allow Audi" onclick=fun(this);>
+                                        <input type="button" id="<%=i%>" class="btn-success"name="submit" value="Book Audi" onclick=fun(this);>
                                     </div>
                                 </center>
 

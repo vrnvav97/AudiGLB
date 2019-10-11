@@ -164,7 +164,9 @@
                                             <center> 
 
                                               <div  text-align="center" class="form-group">
+                                                  <form action ="forms.jsp">
                                                   <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                  </form>
                                                   <input type="submit" class="btn-success" name="submit" value="Book Audi">
                                               </div>
                                           </center>

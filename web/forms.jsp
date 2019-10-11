@@ -100,7 +100,7 @@
 					<option>CSE - Computer Science & Engineering</option>
 					<option>IT - Information Technology</option>
 					<option>MCA - Master of Computer Applications</option>
-					<option>1st YR -  Applied Sciences</option>
+					<option>AS -  Applied Sciences</option>
 					<option>ECE - Electornics & Communication Engineering</option>
 					<option>EE - Electronics Engineering</option>
 					<option>CE - Civil Enginnering</option>
