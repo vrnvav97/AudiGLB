@@ -3,12 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/history.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/adminBookedByMe.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/adminAllHistory.jsp</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/src/java/dba/dbConnect.java</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/web/js/historyjs.js</file>
             <file>file:/C:/Users/Nsignia/Documents/GitHub/AudiGLB/src/java/Servlets/LoginCheck.java</file>
+=======
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/src/java/dba/dbConnect.java</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/src/java/Servlets/CancelHistoryAdmin.java</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/src/java/Servlets/AudiProcess.java</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/src/java/Servlets/CancelHistoryUser.java</file>
+            <file>file:/C:/Users/Mukul%20Samrat/Documents/GitHub/AudiGLB/web/adminHistory.jsp</file>
+>>>>>>> da2839ddfef7f67544d8630d3c747111cf440744
         </group>
     </open-files>
 </project-private>
