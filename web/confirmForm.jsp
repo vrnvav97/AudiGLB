@@ -164,11 +164,14 @@
                                             <center> 
 
                                               <div  text-align="center" class="form-group">
-                                                  <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                  <input type="submit" class="btn-success" name="submit" value="Book Audi">
+                                                   <input type="submit" class="btn-success" name="submit" value="Book Audi">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </form>
+                                          <form action="forms.jsp" style="display: inline">
+                                                  <input type="submit" class="btn-danger cancel" name="submit" value="Cancel">
+                                                  </form>
+                                                 
                                               </div>
                                           </center>
-                                  </form>
                           </div>
                     </div>
                 </div>
@@ -178,7 +181,7 @@
                                               
 
 	<script type="text/javascript" src="js/font-awesome.js"></script>
-        <script type="text/javascript" src="js/confirmFormjs.js"></script>
+<!--        <script type="text/javascript" src="js/confirmFormjs.js"></script>-->
 </body>
 </html>
 <%
