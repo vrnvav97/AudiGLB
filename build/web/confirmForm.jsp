@@ -163,14 +163,14 @@
                                               
                                             <center> 
 
-                                              <div  text-align="center" class="form-group">
-                                                  <form action ="forms.jsp">
-                                                  <input type="button" class="btn-danger cancel" name="submit" value="Cancel">&nbsp;&nbsp;&nbsp;&nbsp;
+                                              <div  text-align="center" class="form-group">">
+                                                   <input type="submit" class="btn-success" name="submit" value="Book Audi">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </form>
+                                          <form action="forms.jsp" style="display: inline">
+                                                  <input type="submit" class="btn-danger cancel" name="submit" value="Cancel">
                                                   </form>
-                                                  <input type="submit" class="btn-success" name="submit" value="Book Audi">
                                               </div>
                                           </center>
-                                  </form>
                           </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                                               
 
 	<script type="text/javascript" src="js/font-awesome.js"></script>
-        <script type="text/javascript" src="js/confirmFormjs.js"></script>
+<!--        <script type="text/javascript" src="js/confirmFormjs.js"></script>-->
 </body>
 </html>
 <%
