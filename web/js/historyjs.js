@@ -1,5 +1,5 @@
-var a = document.getElementsByClassName('getDate');
-var b = document.getElementsByClassName('cancelButton');
+var a = document.querySelectorAll('.getDate');
+var b = document.querySelectorAll('.cancelButton');
 for (i=0;i<a.length;++i)
 {
     var date = a[i].getAttribute('value');
@@ -9,4 +9,4 @@ for (i=0;i<a.length;++i)
       b[i].classList.remove('cancelButton');
     }
 }
-    
+
