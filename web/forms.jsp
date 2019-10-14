@@ -132,6 +132,12 @@
                                     <label class="label">Time</label>
                                     <input type="time" required name="time1"> To <input type="time" name="time2">
                                 </div>
+                                
+                                <div class="form-group">
+                                    <label class="label">Description(50-100 Words)</label>
+                                    &nbsp;&nbsp;&nbsp; <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+                                </div>
+                                
                                 <div class="form-group">
                                     <label class="label">Expected Gathering</label>
                                     <input type="text" pattern="^[_0-9]{1,}$" name="eventGathering" required>

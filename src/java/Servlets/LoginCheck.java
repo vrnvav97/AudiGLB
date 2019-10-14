@@ -37,7 +37,7 @@ public class LoginCheck extends HttpServlet {
                h.put("username",username);
                h.put("name",r.getString("name"));
                h.put("post",r.getString("post"));
-               
+               h.put("email", r.getString("email"));
                     if(r.getString("post").equals("admin")){
                           session.setAttribute("AdminDetails",h);
                           response.sendRedirect("adminDashboard.jsp");
