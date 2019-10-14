@@ -163,7 +163,7 @@
                                               
                                             <center> 
 
-                                              <div  text-align="center" class="form-group">">
+                                              <div  text-align="center" class="form-group">
                                                    <input type="submit" class="btn-success" name="submit" value="Book Audi">&nbsp;&nbsp;&nbsp;&nbsp;
                                     </form>
                                           <form action="forms.jsp" style="display: inline">

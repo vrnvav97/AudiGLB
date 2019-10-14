@@ -65,7 +65,11 @@ public class AudiProcess extends HttpServlet {
             }
            String s=db.insertAudiBookigProcess(nameOfDepartment,eventName,typeOfEvent,eventChiefGuest,sdt,usr_time1,usr_time2,eventGathering,username);
             if(s.equalsIgnoreCase("Success")){
+                session.setAttribute("msg","Your Request For Audi Booking Is Sent Successfully!!!");
+                
                 //start mail code
+                try{
+                
                         final String SEmail = "samrattechnologies01@gmail.com";
                         final String SPass = "S@Tech123";
 
@@ -73,10 +77,10 @@ public class AudiProcess extends HttpServlet {
                         final String REmail2 = "pa.director@glbitm.org";
                         final String Sub = "Requested For Audi Sucessfully  || GlbAudiBookingApp";
                         final String Sub2 = "Pending Request for Audi || GlbAudiBookingApp";
-                        final String Body1 = "Hii " + REmail + "<br>You request for Audi for"+ eventName +" event have been sent to Admin.<br> You will get notified on Audi Confirmination.<br>If You have any Query Contact us @ " + SEmail;
+                        final String Body1 = "Hii " + REmail + "<br>You request for Audi for "+ eventName +" event have been sent to Admin.<br> You will get notified on Audi Confirmination.<br>If You have any Query Contact us @ " + SEmail;
                         final String Body2 = "Hii Admin"  + "<br>There is  request for Audi by"+ username +"from "+nameOfDepartment +"for "+ eventName +"event.<br>If You have any Query Contact us @ " + SEmail;
                         
-                        //mail sendCode
+                       
                         
                         Properties props = new Properties();
                         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -101,14 +105,21 @@ public class AudiProcess extends HttpServlet {
                         
                         Message message2 = new MimeMessage(ses);
                         message2.setFrom(new InternetAddress(SEmail, "Samrat Technologies"));
-                        message2.setRecipients(Message.RecipientType.TO, InternetAddress.parse(REmail2));
+                        message2.setRecipients(Message.RecipientType.TO, InternetAddress.parse(REmail));
                         message2.setSubject(Sub2);
                         message2.setContent(Body2, "text/html");
                         Transport.send(message2);
                 
                 
+                
+                }catch(Exception e){
+               e.printStackTrace();
+               session.setAttribute("msg","Error in Sending Mail!");
+               
+        }
                 //end mail code
-               session.setAttribute("msg","Your Request For Audi Booking Is Sent Successfully!!!");
+                
+               
                if(((String)h.get("post")).equals("admin")){
                    response.sendRedirect("adminDashboard.jsp");
                }else{
