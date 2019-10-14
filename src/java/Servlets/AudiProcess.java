@@ -40,7 +40,9 @@ public class AudiProcess extends HttpServlet {
                 h=ah;
             }
             String username=(String)h.get("username");
+            //m
             String userEmail=(String)h.get("email");
+            //mm
             String nameOfDepartment=request.getParameter("nameOfDepartment");
             String eventName=request.getParameter("eventName");
             String typeOfEvent=request.getParameter("typeOfEvent");
@@ -68,9 +70,14 @@ public class AudiProcess extends HttpServlet {
                         final String SPass = "S@Tech123";
 
                         final String REmail = userEmail;
+                        final String REmail2 = "pa.director@glbitm.org";
                         final String Sub = "Requested For Audi Sucessfully  || GlbAudiBookingApp";
-                        final String Body = "Hii " + REmail + "<br>You request for Audi have been sent to Admin.<br> You will get notified on Audi Confirmination.<br>If You have any Query Contact us @ " + SEmail;
+                        final String Sub2 = "Pending Request for Audi || GlbAudiBookingApp";
+                        final String Body1 = "Hii " + REmail + "<br>You request for Audi for"+ eventName +" event have been sent to Admin.<br> You will get notified on Audi Confirmination.<br>If You have any Query Contact us @ " + SEmail;
+                        final String Body2 = "Hii Admin"  + "<br>There is  request for Audi by"+ username +"from "+nameOfDepartment +"for "+ eventName +"event.<br>If You have any Query Contact us @ " + SEmail;
+                        
                         //mail sendCode
+                        
                         Properties props = new Properties();
                         props.put("mail.smtp.host", "smtp.gmail.com");
                         props.put("mail.smtp.socketFactory.port", "465");
@@ -85,12 +92,19 @@ public class AudiProcess extends HttpServlet {
                         }
                         );
 
-                        Message message = new MimeMessage(ses);
-                        message.setFrom(new InternetAddress(SEmail, "Samrat Technologies"));
-                        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(REmail));
-                        message.setSubject(Sub);
-                        message.setContent(Body, "text/html");
-                        Transport.send(message);
+                        Message message1 = new MimeMessage(ses);
+                        message1.setFrom(new InternetAddress(SEmail, "Samrat Technologies"));
+                        message1.setRecipients(Message.RecipientType.TO, InternetAddress.parse(REmail));
+                        message1.setSubject(Sub);
+                        message1.setContent(Body1, "text/html");
+                        Transport.send(message1);
+                        
+                        Message message2 = new MimeMessage(ses);
+                        message2.setFrom(new InternetAddress(SEmail, "Samrat Technologies"));
+                        message2.setRecipients(Message.RecipientType.TO, InternetAddress.parse(REmail2));
+                        message2.setSubject(Sub2);
+                        message2.setContent(Body2, "text/html");
+                        Transport.send(message2);
                 
                 
                 //end mail code
