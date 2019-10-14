@@ -78,7 +78,7 @@ public class AudiProcess extends HttpServlet {
                         final String Sub = "Requested For Audi Sucessfully  || GlbAudiBookingApp";
                         final String Sub2 = "Pending Request for Audi || GlbAudiBookingApp";
                         final String Body1 = "Hii " + REmail + "<br>You request for Audi for "+ eventName +" event have been sent to Admin.<br> You will get notified on Audi Confirmination.<br>If You have any Query Contact us @ " + SEmail;
-                        final String Body2 = "Hii Admin"  + "<br>There is  request for Audi by"+ username +"from "+nameOfDepartment +"for "+ eventName +"event.<br>If You have any Query Contact us @ " + SEmail;
+                        final String Body2 = "Hii Admin"  + "<br>There is  request for Audi by "+ username +"from "+nameOfDepartment +" for "+ eventName +" event.<br>If You have any Query Contact us @ " + SEmail;
                         
                        
                         
