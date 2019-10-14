@@ -113,7 +113,7 @@ public class AudiProcess extends HttpServlet {
                 
                 
                 }catch(Exception e){
-               e.printStackTrace();
+             
                session.setAttribute("msg","Error in Sending Mail!");
                
         }
