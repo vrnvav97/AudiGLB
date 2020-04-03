@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>User Dashboard</title>
+	<title>Admin Dashboard</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
 		body
@@ -37,7 +38,6 @@
 			border-radius: 20px;
 			margin: 70px;
 			float: left;
-                        
 		}
                 .box:hover
                 {
@@ -55,6 +55,7 @@
 			margin: 5px;
 			line-height: 50px;
 		}
+                
 		.box-inner-down
 		{
 			color: #fff;
@@ -71,7 +72,10 @@
 		{
 			color: #fff;
 		}
-
+                .container h4
+		{
+			color: #fff;
+		}
 	</style>
 </head>
 <body>
@@ -85,19 +89,18 @@
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a>
 			<a href="" class="navbar">hi</a> -->
-<!--			<p class="navbar"></p>-->
+<!--                        <p class="navbar"></p>-->
 			<p class="navbar"><a href="Logout.jsp">Logout</a></p>
 			<p class="navbar">Username</p>
 <!--			<p class="navbar"><i class="fa fa-bell" aria-hidden="true" ><span class="badge">1</span></i></p>-->
 		</div>
 	</div>
 		<div class="container">
- <a href="https://vrnvav97.github.io/AudiGLB/"><button class="btn-primary" style="padding: 5px; margin: 10px">Login</button></a>
- <a href="https://vrnvav97.github.io/AudiGLB/adminDashboard.html"><button class="btn-primary" style="padding: 5px; margin: 10px">Admin Dashboard</button></a>
- <a href="https://vrnvav97.github.io/AudiGLB/bookAudi.html"><button class="btn-primary" style="padding: 5px; margin: 10px">Book Audi</button></a>
+		    
+<a href="https://vrnvav97.github.io/AudiGLB/"><button class="btn-primary" style="padding: 5px; margin: 10px">Login</button></a>
+<a href="https://vrnvav97.github.io/AudiGLB/userDashboard.html"><button class="btn-primary" style="padding: 5px; margin: 10px">User Dashboard</button></a><a href="https://vrnvav97.github.io/AudiGLB/bookAudi.html"><button class="btn-primary" style="padding: 5px; margin: 10px">Book Audi</button></a>                                   
                                         <br>
-                             
-			<a href="forms.jsp">
+                    <a href="forms.jsp">
 				<div class="box">
 					<div class="box-inner">
 					<h3 class="text-center">Book Audi</h3>
@@ -110,7 +113,7 @@
 
 			
 
-			<a href="history.jsp">
+			<a href="adminHistory.jsp">
 				<div class="box">
 					<div class="box-inner">
 						<h3 class="text-center">History</h3>
@@ -120,7 +123,31 @@
 					</div>
 				</div>
 			</a>
-
+                        <a href="pendingRequest.jsp">
+				<div class="box">
+					<div class="box-inner">
+						<h4 class="text-center">View Pending Request</h4>
+					</div>
+					<div class="box-inner-down">
+					<i class="fa fa-exclamation-triangle icon " aria-hidden="true" style="font-size: 8em"></i>
+                       
+					</div>
+				</div>
+			</a>
+                    
+                    <a href="cancelledRequest.jsp">
+				<div class="box">
+					<div class="box-inner">
+						<h4 class="text-center">View Cancelled Request</h4>
+					</div>
+					<div class="box-inner-down">
+					<i class="fa fa-times-circle icon" aria-hidden="true" style="font-size: 8em"></i>
+                                     
+					</div>
+				</div>
+			</a>
+                    
+                    
 		</div>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
